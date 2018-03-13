@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <include
+        android:id="@+id/content"
+        layout="@layout/content_scrolling" />
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/AppTheme.ActionBar">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            style="@style/AppTheme.ActionBar.Title" />
+
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="?android:attr/windowBackground"
+        app:itemIconTint="@color/bnv_tab_item"
+        app:itemTextColor="@color/bnv_tab_item"
+        app:menu="@menu/navigation" />
+
+</RelativeLayout>
