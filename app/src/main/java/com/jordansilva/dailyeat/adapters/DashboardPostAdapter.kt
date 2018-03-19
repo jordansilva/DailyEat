@@ -74,17 +74,16 @@ class DashboardPostAdapter(private val context: Context,
             avatar.loadUrlCenterCrop(item.avatar)
             date.text = item.date.relativeTime
             rate.rating = item.rateAmount
+            animateLikeButton(btnLike, item.liked)
 
             btnLike.onClick {
                 item.liked = !item.liked
-                animateLikeButton(it, item.liked)
+                animateLikeButton(it, item.liked, true)
             }
         }
 
-
-
         @SuppressLint("RestrictedApi")
-        fun animateLikeButton(it: View?, liked: Boolean) {
+        fun animateLikeButton(it: View?, liked: Boolean, animate : Boolean = false) {
             it as LottieAnimationView
 
             val keyPath = KeyPath("**")
@@ -98,8 +97,11 @@ class DashboardPostAdapter(private val context: Context,
             }
 
             it.addValueCallback<ColorFilter>(keyPath, LottieProperty.COLOR_FILTER, callback)
-            TransitionManager.beginDelayedTransition(btnLike.parent as ViewGroup)
-            it.playAnimation()
+
+            if (animate) {
+                TransitionManager.beginDelayedTransition(btnLike.parent as ViewGroup)
+                it.playAnimation()
+            }
         }
 
     }
