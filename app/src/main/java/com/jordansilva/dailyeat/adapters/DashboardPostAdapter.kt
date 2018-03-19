@@ -16,7 +16,7 @@ import com.airbnb.lottie.model.KeyPath
 import com.airbnb.lottie.value.LottieValueCallback
 import com.jordansilva.dailyeat.R
 import com.jordansilva.dailyeat.data.model.DashboardPost
-import com.jordansilva.dailyeat.util.loadUrl
+import com.jordansilva.dailyeat.util.loadUrlCenterCrop
 import kotlinx.android.synthetic.main.item_dashboard_recipe.view.*
 import org.jetbrains.anko.sdk25.coroutines.onClick
 import unimedbh.app.prestador.util.relativeTime
@@ -39,7 +39,7 @@ class DashboardPostAdapter(private val context: Context,
 
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
         val item = data[position]
-        holder.bindView(context, item)
+        holder.bindView(item)
     }
 
 
@@ -65,14 +65,15 @@ class DashboardPostAdapter(private val context: Context,
         //var btnSave = itemView.buttonSave
 
         @SuppressLint("RestrictedApi")
-        fun bindView(context: Context, item: DashboardPost) {
+        fun bindView(item: DashboardPost) {
+
             name.text = item.name
             description.text = item.description
-            image.loadUrl(item.imageUrl)
+            image.loadUrlCenterCrop(item.imageUrl)
             author.text = item.author
-            avatar.loadUrl(item.avatar)
+            avatar.loadUrlCenterCrop(item.avatar)
             date.text = item.date.relativeTime
-            rate.rating = 4.0f
+            rate.rating = item.rateAmount
 
             btnLike.onClick {
                 item.liked = !item.liked

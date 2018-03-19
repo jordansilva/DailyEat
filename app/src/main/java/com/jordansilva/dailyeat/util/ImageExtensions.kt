@@ -9,3 +9,8 @@ import com.squareup.picasso.Picasso
 fun ImageView.loadUrl(url: String) {
     Picasso.get().load(url).into(this)
 }
+
+fun ImageView.loadUrlCenterCrop(url: String) {
+    Picasso.get().setIndicatorsEnabled(true)
+    Picasso.get().load(url).fit().centerCrop().into(this)
+}

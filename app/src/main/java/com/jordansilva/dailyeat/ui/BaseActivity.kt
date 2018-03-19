@@ -39,11 +39,8 @@ open class BaseActivity : AppCompatActivity() {
     }
 
     protected fun addFragment(@IdRes containerViewId: Int, vararg fragment: Fragment) {
-        fragmentManager?.let { fm ->
-            val ft = fm.beginTransaction()
-            fragment.forEach { ft.add(containerViewId, it) }
-            ft.commit()
-        }
+        val ft = fragmentManager.beginTransaction()
+        fragment.forEach { ft.add(containerViewId, it) }
+        ft.commit()
     }
-
 }

@@ -8,8 +8,11 @@ import android.view.ViewGroup
 import com.jordansilva.dailyeat.R
 import com.jordansilva.dailyeat.adapters.DashboardPostAdapter
 import com.jordansilva.dailyeat.data.model.DashboardPost
+import com.jordansilva.dailyeat.data.model.User
 import com.jordansilva.dailyeat.ui.BaseFragment
+import com.jordansilva.dailyeat.util.Mock
 import kotlinx.android.synthetic.main.fragment_dashboard.*
+import unimedbh.app.prestador.util.random
 import java.util.*
 
 class DashboardFragment : BaseFragment() {
@@ -43,28 +46,51 @@ class DashboardFragment : BaseFragment() {
 
         adapter = DashboardPostAdapter(context!!, data)
         recyclerDashBoard.adapter = adapter
-        recyclerDashBoard.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL,false)
+        recyclerDashBoard.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
     }
 
     fun mockList(): List<DashboardPost> {
         val data = ArrayList<DashboardPost>()
+
+        //Mock
+        val mock = Mock()
+        val images = mock.mockImages()
+        val users = mock.mockUsers()
         val calendar = Calendar.getInstance(Locale.getDefault())
 
-        for (i in 0..15) {
+        for (i in 0..16) {
             calendar.add(Calendar.HOUR_OF_DAY, i * -1)
+            val user = users.random()!!
             val item = DashboardPost(UUID.randomUUID(),
-                    name = "Torrada Chique",
+                    name = "Food $i",
                     description = getString(R.string.lorem_ipsum),
-                    imageUrl = "https://images.unsplash.com/photo-1465014925804-7b9ede58d0d7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=19ffb3aea41bfd3c8179441e70b34e90&dpr=1&auto=format&fit=crop&w=1000&q=80&cs=tinysrgb",
+                    imageUrl = images[i],
                     authorId = UUID.randomUUID(),
-                    author = "Jordan Silva",
-                    avatar = "https://scontent.fsdu11-1.fna.fbcdn.net/v/t1.0-9/18403748_10212881587212658_7977014779724222797_n.jpg?oh=3584704ff3559c4fef00e9c3a1fd66d9&oe=5B29BD30",
+                    author = user.name,
+                    avatar = user.avatar!!,
                     date = calendar.time)
+            item.rateAmount = Random().nextFloat() * 5f
             data.add(item)
         }
 
         return data
     }
 
+    class UserBuilder {
+
+        private var user: User = User(UUID.randomUUID().toString(), "", "")
+
+        fun name(name: String): UserBuilder {
+            user.name = name
+            return this
+        }
+
+        fun avatar(avatar: String): UserBuilder {
+            user.avatar = avatar
+            return this
+        }
+
+        fun build() = user
+    }
 
 }

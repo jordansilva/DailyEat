@@ -12,5 +12,5 @@ data class User(@PrimaryKey var id: String,
                 var password: String = "") : BaseModel() {
 
     var name: String = ""
-    var avatar: ByteArray? = null
+    var avatar: String? = null
 }
