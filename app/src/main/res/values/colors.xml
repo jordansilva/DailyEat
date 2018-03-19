@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#FFDCE0E1</color>
-    <color name="colorPrimaryDark">#DCE0E1</color>
+    <color name="colorPrimary">#6E5797</color>
+    <color name="colorPrimaryDark">#59437A</color>
     <color name="colorAccent">#FF4081</color>
 
     <color name="zircon">#DCE0E1</color>
@@ -11,11 +11,17 @@
     <color name="dew">#F3F7F4</color>
     <color name="daisy_bush">#5E4582</color>
 
-    <color name="light_gray">#F2F3F2</color>
+    <color name="light_gray">#efefef</color>
     <color name="gray">#D2D8DA</color>
+    <color name="medium_gray">#666666</color>
+    <color name="dark_gray">#333333</color>
+
     <color name="purple">#59437A</color>
     <color name="transparent_purple">#3359437A</color>
+    <color name="transparent_white">#33FFFFFF</color>
     <color name="light_purple">#6E5797</color>
     <color name="light_green">#AFCC7B</color>
     <color name="light_blue">#97DBF7</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="pink">#FF4081</color>
 </resources>

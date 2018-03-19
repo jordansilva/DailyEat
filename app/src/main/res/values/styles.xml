@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
@@ -9,10 +9,10 @@
         <item name="windowNoTitle">true</item>
         <item name="android:windowActionBar">false</item>
         <item name="android:windowNoTitle">true</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
     </style>
 
     <style name="AppTheme.ActionBar">
-        <item name="android:background">?attr/colorPrimary</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">?attr/actionBarSize</item>
         <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
@@ -24,10 +24,38 @@
         <item name="android:textAllCaps">true</item>
         <item name="android:textColor">@color/daisy_bush</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:layout_gravity">center</item>
-        <item name="android:layout_width">wrap_content</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:spacing">12sp</item>
     </style>
 
+    <style name="AppTheme.Text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="fontFamily">@font/roboto</item>
+    </style>
+
+    <style name="AppTheme.Text.Small">
+        <item name="android:textSize">@dimen/font_default</item>
+    </style>
+
+    <style name="AppTheme.Text.DashboardPostTitle">
+        <item name="android:background">#66FFFFFF</item>
+        <item name="android:textSize">@dimen/font_small</item>
+        <item name="android:textColor">@color/dark_gray</item>
+        <item name="android:fontFamily">@font/sf_ui</item>
+        <item name="fontFamily">@font/sf_ui</item>
+        <item name="android:fontWeight" tools:targetApi="o">600</item>
+        <item name="fontWeight">600</item>
+    </style>
+
+    <style name="AppTheme.Text.Small.Purple">
+        <item name="android:textColor">@color/purple</item>
+    </style>
+
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

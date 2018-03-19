@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<font-family xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <font
+        android:font="@font/sf_ui_light"
+        android:fontStyle="normal"
+        android:fontWeight="200"
+        tools:targetApi="o" />
+
+
+    <font
+        android:font="@font/sf_ui_medium"
+        android:fontStyle="normal"
+        android:fontWeight="400"
+        tools:targetApi="o" />
+
+
+    <font
+        android:font="@font/sf_ui_semibold"
+        android:fontStyle="normal"
+        android:fontWeight="600"
+        tools:targetApi="o" />
+
+
+    <font
+        android:font="@font/sf_ui_bold"
+        android:fontStyle="normal"
+        android:fontWeight="800"
+        tools:targetApi="o" />
+</font-family>

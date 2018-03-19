@@ -6,7 +6,6 @@ import android.support.design.internal.BaselineLayout
 import android.support.design.internal.BottomNavigationItemView
 import android.support.design.internal.BottomNavigationMenuView
 import android.support.design.widget.BottomNavigationView
-import android.text.InputFilter
 import android.util.Log
 import android.widget.TextView
 import org.jetbrains.anko.forEachChild
@@ -30,7 +29,7 @@ fun BottomNavigationView.disableShiftMode() {
             // set once again checked value, so view will be updated
             item.setChecked(item.itemData.isChecked)
         }
-    } catch (e: NoSuchFieldException) {
+    } catch (e: Exception) {
         Log.e("ERROR NO SUCH FIELD", "Unable to get shift mode field")
     } catch (e: IllegalAccessException) {
         Log.e("ERROR ILLEGAL ALG", "Unable to change value of shift mode")
