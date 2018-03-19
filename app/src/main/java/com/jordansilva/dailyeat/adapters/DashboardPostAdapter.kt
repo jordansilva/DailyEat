@@ -26,7 +26,8 @@ import unimedbh.app.prestador.util.relativeTime
  * Created by jordansilva on 18/03/18.
  */
 class DashboardPostAdapter(private val context: Context,
-                           private val data: List<DashboardPost>) : RecyclerView.Adapter<DashboardPostAdapter.ItemViewHolder>() {
+                           private val data: List<DashboardPost>,
+                           private val listener: DashboardPostListener?) : RecyclerView.Adapter<DashboardPostAdapter.ItemViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.item_dashboard_recipe, parent, false)
@@ -39,7 +40,16 @@ class DashboardPostAdapter(private val context: Context,
 
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
         val item = data[position]
+
         holder.bindView(item)
+        holder.name.onClick { listener?.onRecipeClick(item) }
+        holder.description.onClick { listener?.onRecipeClick(item) }
+        holder.image.onClick { listener?.onRecipeClick(item) }
+        holder.btnLike.onClick {
+            item.liked = !item.liked
+            holder.animateLikeButton(it, item.liked, true)
+            listener?.onLikeClick(item)
+        }
     }
 
 
@@ -73,17 +83,13 @@ class DashboardPostAdapter(private val context: Context,
             author.text = item.author
             avatar.loadUrlCenterCrop(item.avatar)
             date.text = item.date.relativeTime
-            rate.rating = item.rateAmount
+            rate.rating = item.rating
             animateLikeButton(btnLike, item.liked)
 
-            btnLike.onClick {
-                item.liked = !item.liked
-                animateLikeButton(it, item.liked, true)
-            }
         }
 
         @SuppressLint("RestrictedApi")
-        fun animateLikeButton(it: View?, liked: Boolean, animate : Boolean = false) {
+        fun animateLikeButton(it: View?, liked: Boolean, animate: Boolean = false) {
             it as LottieAnimationView
 
             val keyPath = KeyPath("**")
@@ -103,6 +109,10 @@ class DashboardPostAdapter(private val context: Context,
                 it.playAnimation()
             }
         }
+    }
 
+    interface DashboardPostListener {
+        fun onRecipeClick(item: DashboardPost)
+        fun onLikeClick(item: DashboardPost)
     }
 }

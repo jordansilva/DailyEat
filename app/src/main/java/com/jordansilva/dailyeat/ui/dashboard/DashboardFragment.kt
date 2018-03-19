@@ -8,15 +8,14 @@ import android.view.ViewGroup
 import com.jordansilva.dailyeat.R
 import com.jordansilva.dailyeat.adapters.DashboardPostAdapter
 import com.jordansilva.dailyeat.data.model.DashboardPost
-import com.jordansilva.dailyeat.data.model.User
 import com.jordansilva.dailyeat.ui.BaseFragment
+import com.jordansilva.dailyeat.ui.recipe.RecipeDetailActivity
 import com.jordansilva.dailyeat.util.Mock
 import kotlinx.android.synthetic.main.fragment_dashboard.*
-import unimedbh.app.prestador.util.random
-import java.util.*
+import org.jetbrains.anko.support.v4.startActivity
+import org.jetbrains.anko.support.v4.toast
 
-class DashboardFragment : BaseFragment() {
-
+class DashboardFragment : BaseFragment(), DashboardPostAdapter.DashboardPostListener {
     private lateinit var adapter: DashboardPostAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -42,55 +41,20 @@ class DashboardFragment : BaseFragment() {
 
 
     fun init() {
-        val data = mockList()
+        val data = Mock(context!!).mockList()
 
-        adapter = DashboardPostAdapter(context!!, data)
+        adapter = DashboardPostAdapter(context!!, data, this)
         recyclerDashBoard.adapter = adapter
         recyclerDashBoard.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
     }
 
-    fun mockList(): List<DashboardPost> {
-        val data = ArrayList<DashboardPost>()
 
-        //Mock
-        val mock = Mock()
-        val images = mock.mockImages()
-        val users = mock.mockUsers()
-        val calendar = Calendar.getInstance(Locale.getDefault())
-
-        for (i in 0..16) {
-            calendar.add(Calendar.HOUR_OF_DAY, i * -1)
-            val user = users.random()!!
-            val item = DashboardPost(UUID.randomUUID(),
-                    name = "Food $i",
-                    description = getString(R.string.lorem_ipsum),
-                    imageUrl = images[i],
-                    authorId = UUID.randomUUID(),
-                    author = user.name,
-                    avatar = user.avatar!!,
-                    date = calendar.time)
-            item.rateAmount = Random().nextFloat() * 5f
-            data.add(item)
-        }
-
-        return data
+    override fun onRecipeClick(item: DashboardPost) {
+        startActivity<RecipeDetailActivity>()
     }
 
-    class UserBuilder {
-
-        private var user: User = User(UUID.randomUUID().toString(), "", "")
-
-        fun name(name: String): UserBuilder {
-            user.name = name
-            return this
-        }
-
-        fun avatar(avatar: String): UserBuilder {
-            user.avatar = avatar
-            return this
-        }
-
-        fun build() = user
+    override fun onLikeClick(item: DashboardPost) {
+        toast(if (item.liked) "Liked" else "Disliked!")
     }
 
 }

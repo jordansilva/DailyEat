@@ -1,5 +1,20 @@
-<vector android:height="24dp" android:viewportHeight="4670.0"
-    android:viewportWidth="4810.0" android:width="24dp" xmlns:android="http://schemas.android.com/apk/res/android">
-    <path android:fillColor="#fe3144"
-        android:pathData="M2228,3865c-112,-57 -409,-268 -603,-429 -152,-126 -449,-422 -547,-546 -281,-354 -419,-689 -420,-1018 0,-139 21,-264 64,-377 207,-541 764,-761 1298,-512 91,42 185,107 256,177l54,53 51,-51c65,-65 179,-144 266,-183 314,-143 651,-129 911,38 216,137 376,378 427,643 21,111 21,308 0,420 -55,284 -200,566 -440,852 -113,135 -340,362 -480,479 -194,163 -523,399 -635,455 -64,32 -138,32 -202,-1z" android:strokeColor="#00000000"/>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="@dimen/heart_size"
+    android:height="@dimen/heart_size"
+    android:viewportHeight="100"
+    android:viewportWidth="100">
+    <path
+        android:fillColor="@color/gray"
+        android:pathData="M25.119,2.564c12.434,0.023,18.68,5.892,24.88,17.612 c6.2-11.721,12.446-17.589,24.877-17.612c13.81-0.025,25.035,10.575,25.061,23.66c0.033,23.708-24.952,47.46-49.938,71.212 C25.016,73.685,0.03,49.932,0.064,26.224C0.085,13.14,11.309,2.539,25.119,2.564z" />
+    <group
+        android:name="heart_group"
+        android:pivotX="50"
+        android:pivotY="50"
+        android:scaleX="0.0"
+        android:scaleY="0.0">
+        <path
+            android:name="heart"
+            android:fillColor="@color/pink"
+            android:pathData="M25.119,2.564c12.434,0.023,18.68,5.892,24.88,17.612 c6.2-11.721,12.446-17.589,24.877-17.612c13.81-0.025,25.035,10.575,25.061,23.66c0.033,23.708-24.952,47.46-49.938,71.212 C25.016,73.685,0.03,49.932,0.064,26.224C0.085,13.14,11.309,2.539,25.119,2.564z" />
+    </group>
 </vector>

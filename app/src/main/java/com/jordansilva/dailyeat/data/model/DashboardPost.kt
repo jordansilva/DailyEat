@@ -15,11 +15,13 @@ data class DashboardPost(var id: UUID,
                          var date: Date) : BaseModel() {
 
     //stats
-    var likesAmount: Float = 0f
-    var cookedAmount: Float = 0f
-    var rateAmount: Float = 0f
+    var rated: Boolean = false
+    var rating: Float = 0f
+
+    var amountLikes: Int = 0
+    var amountCooked: Int = 0
+    var amountRatings: Int = 0
 
     var cooked: Boolean = false
     var liked: Boolean = false
-    var rated: Boolean = false
 }

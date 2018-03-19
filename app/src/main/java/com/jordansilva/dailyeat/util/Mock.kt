@@ -1,41 +1,44 @@
 package com.jordansilva.dailyeat.util
 
+import android.content.Context
+import com.jordansilva.dailyeat.R
+import com.jordansilva.dailyeat.data.model.DashboardPost
 import com.jordansilva.dailyeat.data.model.User
-import com.jordansilva.dailyeat.ui.dashboard.DashboardFragment
+import unimedbh.app.prestador.util.random
 import java.util.*
 
 /**
  * Created by jordansilva on 19/03/18.
  */
-class Mock() {
+class Mock(var context: Context) {
     fun mockUsers(): List<User> {
         var users = ArrayList<User>()
 
-        users.add(DashboardFragment.UserBuilder()
+        users.add(UserBuilder()
                 .name("Jordan Silva")
                 .avatar("https://scontent.fsdu11-1.fna.fbcdn.net/v/t1.0-9/18403748_10212881587212658_7977014779724222797_n.jpg?oh=3584704ff3559c4fef00e9c3a1fd66d9&oe=5B29BD30")
                 .build())
-        users.add(DashboardFragment.UserBuilder()
+        users.add(UserBuilder()
                 .name("Gabriela Boaventura")
                 .avatar("https://scontent.fplu4-1.fna.fbcdn.net/v/t1.0-9/26229367_10215722312197353_72208779691992113_n.jpg?oh=57077cb7e23b2c517586450ddf4a6ea2&oe=5B346889")
                 .build())
-        users.add(DashboardFragment.UserBuilder()
+        users.add(UserBuilder()
                 .name("Gibran Silva")
                 .avatar("https://scontent.fplu4-1.fna.fbcdn.net/v/t1.0-1/p160x160/12193340_1064666226906758_2247095994875982561_n.jpg?_nc_cat=0&oh=dd63556ab0f89f477a8e9dd062870734&oe=5B3AFDFB")
                 .build())
-        users.add(DashboardFragment.UserBuilder()
+        users.add(UserBuilder()
                 .name("Douglas Aguiar")
                 .avatar("https://scontent.fplu4-1.fna.fbcdn.net/v/t1.0-9/23621727_10155805826406838_361168776498155417_n.jpg?oh=90a8db7f859860fb661ddf0a716650f0&oe=5B3239CB")
                 .build())
-        users.add(DashboardFragment.UserBuilder()
+        users.add(UserBuilder()
                 .name("Rafael Glater")
                 .avatar("https://scontent.fplu4-1.fna.fbcdn.net/v/t1.0-9/29177235_1766531816744267_5727017002892001280_n.jpg?oh=9a7761d74f45384018dcc57d30dfdbbc&oe=5B34AE81")
                 .build())
-        users.add(DashboardFragment.UserBuilder()
+        users.add(UserBuilder()
                 .name("Ana Paula Gomes")
                 .avatar("https://scontent.fplu4-1.fna.fbcdn.net/v/t1.0-9/17904451_1504394522927904_8378189893043632896_n.jpg?_nc_cat=0&oh=7530ad5d092c92b3e38ec1732e9f229c&oe=5B346577")
                 .build())
-        users.add(DashboardFragment.UserBuilder()
+        users.add(UserBuilder()
                 .name("Raissa Guerra")
                 .avatar("https://scontent.fplu4-1.fna.fbcdn.net/v/t1.0-9/19399978_1400278856720551_3922684003310603527_n.jpg?oh=12ccf2caddc512e79d6786c6f559990b&oe=5B4CB614")
                 .build())
@@ -65,5 +68,49 @@ class Mock() {
         images.add("https://images.unsplash.com/photo-1464347744102-11db6282f854?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=1ddae735d7eb8c88b1c07f8b919140bf&dpr=1&auto=format&fit=crop&w=1000&q=80&cs=tinysrgb")
 
         return images
+    }
+
+    fun mockList(): List<DashboardPost> {
+        val data = ArrayList<DashboardPost>()
+
+        //Mock
+        val images = mockImages()
+        val users = mockUsers()
+        val calendar = Calendar.getInstance(Locale.getDefault())
+
+        for (i in 0..16) {
+            calendar.add(Calendar.HOUR_OF_DAY, i * -1)
+            val user = users.random()!!
+            val item = DashboardPost(UUID.randomUUID(),
+                    name = "Food $i",
+                    description = context.getString(R.string.lorem_ipsum),
+                    imageUrl = images[i],
+                    authorId = UUID.randomUUID(),
+                    author = user.name,
+                    avatar = user.avatar!!,
+                    date = calendar.time)
+            item.rating = Random().nextFloat() * 5f
+            item.amountRatings = Random().nextInt(500)
+            data.add(item)
+        }
+
+        return data
+    }
+
+    class UserBuilder {
+
+        private var user: User = User(UUID.randomUUID().toString(), "", "")
+
+        fun name(name: String): UserBuilder {
+            user.name = name
+            return this
+        }
+
+        fun avatar(avatar: String): UserBuilder {
+            user.avatar = avatar
+            return this
+        }
+
+        fun build() = user
     }
 }

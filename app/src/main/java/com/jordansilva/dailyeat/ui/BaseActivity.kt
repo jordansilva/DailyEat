@@ -9,6 +9,7 @@ import android.support.v7.widget.Toolbar
 import android.widget.TextView
 import com.jordansilva.dailyeat.R
 import org.jetbrains.anko.find
+import org.jetbrains.anko.findOptional
 import unimedbh.app.prestador.util.notNull
 
 open class BaseActivity : AppCompatActivity() {
@@ -30,12 +31,15 @@ open class BaseActivity : AppCompatActivity() {
 
     open fun configureToolbar() {
         toolbar = find(R.id.toolbar)
-        toolbar.notNull {
+        toolbar.notNull { toolbar ->
             setSupportActionBar(toolbar)
-            toolbarTitle = find(R.id.toolbar_title)
-            toolbarTitle?.text = it.title
-            supportActionBar?.setDisplayShowTitleEnabled(false)
+            toolbarTitle = findOptional(R.id.toolbar_title)
+            toolbarTitle.notNull { title ->
+                title.text = toolbar.title
+                supportActionBar?.setDisplayShowTitleEnabled(false)
+            }
         }
+
     }
 
     protected fun addFragment(@IdRes containerViewId: Int, vararg fragment: Fragment) {

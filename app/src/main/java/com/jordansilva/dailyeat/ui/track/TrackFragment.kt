@@ -35,7 +35,6 @@ class TrackFragment : BaseFragment() {
 
     fun init() {
         initStats()
-        initBasket()
     }
 
     fun initStats() {
@@ -52,7 +51,5 @@ class TrackFragment : BaseFragment() {
         view.value.text = value
     }
 
-    fun initBasket() {
-        basketGroup.addItem(R.drawable.ic_restaurant_black_24dp, R.color.light_green)
-    }
+
 }

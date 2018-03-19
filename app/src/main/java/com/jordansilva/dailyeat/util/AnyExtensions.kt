@@ -42,5 +42,9 @@ val Int.px: Int
 val Date.relativeTime: String
     get() = DateUtils.getRelativeTimeSpanString(this.time, Calendar.getInstance(Locale.getDefault()).timeInMillis, 0).toString()
 
+fun Number.format(format: String): String {
+    return String.format(Locale.getDefault(), format, this)
+}
+
 fun <E> List<E>.random(): E? = if (size > 0) get(Random().nextInt(size)) else null
 fun <E> List<E>.random(random: java.util.Random): E? = if (size > 0) get(random.nextInt(size)) else null
