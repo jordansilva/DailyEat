@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.support.v4.app.ActivityOptionsCompat
 import android.support.v4.util.Pair
 import android.support.v7.widget.LinearLayoutManager
-import android.transition.Fade
 
 import android.view.LayoutInflater
 import android.view.View
@@ -14,7 +13,7 @@ import android.view.ViewGroup
 import android.view.animation.AnimationUtils
 import com.jordansilva.dailyeat.R
 import com.jordansilva.dailyeat.adapters.DashboardPostAdapter
-import com.jordansilva.dailyeat.data.model.DashboardPost
+import app.jordansilva.domain.model.DashboardPost
 import com.jordansilva.dailyeat.ui.BaseFragment
 import com.jordansilva.dailyeat.ui.recipe.RecipeDetailActivity
 import com.jordansilva.dailyeat.util.Mock
@@ -22,7 +21,7 @@ import kotlinx.android.synthetic.main.fragment_dashboard.*
 import org.jetbrains.anko.find
 import org.jetbrains.anko.support.v4.ctx
 import org.jetbrains.anko.support.v4.toast
-import unimedbh.app.prestador.util.mapToTypedArray
+import com.jordansilva.dailyeat.util.mapToTypedArray
 
 
 class DashboardFragment : BaseFragment(), DashboardPostAdapter.DashboardPostListener {

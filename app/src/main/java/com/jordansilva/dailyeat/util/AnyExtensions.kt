@@ -1,10 +1,7 @@
-package unimedbh.app.prestador.util
+package com.jordansilva.dailyeat.util
 
 import android.content.res.Resources
 import android.text.format.DateUtils
-import com.google.gson.Gson
-import com.google.gson.reflect.TypeToken
-import com.jordansilva.dailyeat.data.model.BaseModel
 import java.util.*
 
 /**
@@ -23,21 +20,6 @@ inline fun <T, reified R> List<T>.mapToTypedArray(transform: (T) -> R): Array<R>
 
 fun <T : Any> T?.notNull(f: (it: T) -> Unit) {
     if (this != null) f(this)
-}
-
-fun <T : BaseModel> toJson(input: List<T>?, klass: Class<T>): String? {
-
-    input.let {
-        val gson = Gson()
-        val type = TypeToken.getParameterized(List::class.java, klass.javaClass).type
-        return gson.toJson(input, type)
-    }
-}
-
-fun <T : BaseModel> fromJson(input: String, klass: Class<T>): List<T> {
-    val gson = Gson()
-    val type = TypeToken.getParameterized(List::class.java, klass.javaClass).type
-    return gson.fromJson(input, type)
 }
 
 val Int.dp: Float

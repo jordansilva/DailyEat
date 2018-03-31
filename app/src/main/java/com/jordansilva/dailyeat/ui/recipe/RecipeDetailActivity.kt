@@ -11,8 +11,8 @@ import android.view.animation.AnimationUtils
 import com.jordansilva.dailyeat.R
 import com.jordansilva.dailyeat.adapters.IngredientAdapter
 import com.jordansilva.dailyeat.adapters.RecipeAdapter
-import com.jordansilva.dailyeat.data.model.DashboardPost
-import com.jordansilva.dailyeat.data.model.RecipeIngredient
+import app.jordansilva.domain.model.DashboardPost
+import app.jordansilva.data.model.RecipeIngredient
 import com.jordansilva.dailyeat.ui.BaseActivity
 import com.jordansilva.dailyeat.util.Mock
 import com.jordansilva.dailyeat.util.loadUrl
@@ -24,7 +24,6 @@ import kotlinx.android.synthetic.main.layout_similar_recipes.*
 import org.jetbrains.anko.ctx
 import org.jetbrains.anko.find
 import org.jetbrains.anko.toast
-import unimedbh.app.prestador.util.format
 
 class RecipeDetailActivity : BaseActivity(), RecipeAdapter.RecipeListener {
     companion object {

@@ -2,9 +2,8 @@ package com.jordansilva.dailyeat.util
 
 import android.content.Context
 import com.jordansilva.dailyeat.R
-import com.jordansilva.dailyeat.data.model.DashboardPost
-import com.jordansilva.dailyeat.data.model.User
-import unimedbh.app.prestador.util.random
+import app.jordansilva.domain.model.DashboardPost
+import app.jordansilva.domain.model.User
 import java.util.*
 
 /**

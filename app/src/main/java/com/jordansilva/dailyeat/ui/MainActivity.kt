@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.support.design.widget.AppBarLayout
 import android.support.design.widget.BottomNavigationView
 import android.support.v4.app.Fragment
-import android.transition.Explode
 import android.transition.Fade
 import android.view.View
 import android.view.Window
@@ -18,8 +17,7 @@ import com.jordansilva.dailyeat.util.typeface
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.find
 import org.jetbrains.anko.toast
-import unimedbh.app.prestador.util.notNull
-import java.nio.file.Files.find
+import com.jordansilva.dailyeat.util.notNull
 
 
 class MainActivity : BaseActivity() {

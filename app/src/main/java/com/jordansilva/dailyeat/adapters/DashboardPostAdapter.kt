@@ -15,11 +15,10 @@ import com.airbnb.lottie.SimpleColorFilter
 import com.airbnb.lottie.model.KeyPath
 import com.airbnb.lottie.value.LottieValueCallback
 import com.jordansilva.dailyeat.R
-import com.jordansilva.dailyeat.data.model.DashboardPost
+import app.jordansilva.domain.model.DashboardPost
 import com.jordansilva.dailyeat.util.loadUrlCenterCrop
 import kotlinx.android.synthetic.main.item_dashboard_recipe.view.*
 import org.jetbrains.anko.sdk25.coroutines.onClick
-import unimedbh.app.prestador.util.relativeTime
 
 
 /**

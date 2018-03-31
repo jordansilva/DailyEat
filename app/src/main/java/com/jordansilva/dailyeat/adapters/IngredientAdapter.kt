@@ -2,27 +2,15 @@ package com.jordansilva.dailyeat.adapters
 
 import android.annotation.SuppressLint
 import android.content.Context
-import android.graphics.drawable.BitmapDrawable
 import android.os.Build
-import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory
 import android.support.v7.widget.RecyclerView
 import android.text.Html
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.jordansilva.dailyeat.R
-import com.jordansilva.dailyeat.data.model.DashboardPost
-import com.jordansilva.dailyeat.data.model.RecipeIngredient
-import com.jordansilva.dailyeat.util.loadUrl
-import com.jordansilva.dailyeat.util.loadUrlCenterCrop
-import com.jordansilva.dailyeat.util.loadUrlWithTransformation
-import com.squareup.picasso.Picasso
-import jp.wasabeef.picasso.transformations.RoundedCornersTransformation
+import app.jordansilva.data.model.RecipeIngredient
 import kotlinx.android.synthetic.main.item_dashboard_recipe.view.*
-import org.jetbrains.anko.sdk25.coroutines.onClick
-import unimedbh.app.prestador.util.dp
-import unimedbh.app.prestador.util.px
-import kotlin.math.round
 
 
 /**

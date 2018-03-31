@@ -10,7 +10,7 @@ import android.widget.TextView
 import com.jordansilva.dailyeat.R
 import org.jetbrains.anko.find
 import org.jetbrains.anko.findOptional
-import unimedbh.app.prestador.util.notNull
+import com.jordansilva.dailyeat.util.notNull
 
 open class BaseActivity : AppCompatActivity() {
 
