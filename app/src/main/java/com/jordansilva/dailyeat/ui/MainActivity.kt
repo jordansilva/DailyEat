@@ -1,11 +1,15 @@
 package com.jordansilva.dailyeat.ui
 
 import android.graphics.Typeface
+import android.os.Build
 import android.os.Bundle
 import android.support.design.widget.AppBarLayout
 import android.support.design.widget.BottomNavigationView
 import android.support.v4.app.Fragment
+import android.transition.Explode
+import android.transition.Fade
 import android.view.View
+import android.view.Window
 import android.view.animation.AlphaAnimation
 import com.jordansilva.dailyeat.R
 import com.jordansilva.dailyeat.ui.dashboard.DashboardFragment
@@ -15,7 +19,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.find
 import org.jetbrains.anko.toast
 import unimedbh.app.prestador.util.notNull
-
+import java.nio.file.Files.find
 
 
 class MainActivity : BaseActivity() {
@@ -40,8 +44,22 @@ class MainActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
 
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            window.requestFeature(Window.FEATURE_CONTENT_TRANSITIONS)
+
+            val transition = Fade()
+            transition.excludeTarget(R.id.navigation, true)
+            transition.excludeTarget(android.R.id.statusBarBackground, true)
+            transition.excludeTarget(android.R.id.navigationBarBackground, true)
+            transition.excludeTarget(resources.getIdentifier("action_bar_container", "id", "android"), true)
+
+            window.enterTransition = transition
+            window.exitTransition = transition
+        }
+
+
+        setContentView(R.layout.activity_main)
         setupUI()
     }
 

@@ -4,8 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="2dp"
     android:layout_marginBottom="2dp"
+    android:layout_marginTop="2dp"
+    android:transitionName="recipe"
     app:cardCornerRadius="0dp"
     app:cardElevation="0dp">
 
@@ -47,11 +48,10 @@
                 android:id="@+id/textName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#99FFFFFF"
-                android:fontFamily="@font/advent_pro"
+                android:fontFamily="@font/sf_ui"
                 android:textColor="@color/dark_gray"
-                android:textSize="@dimen/font_big"
-                android:textStyle="bold"
+                android:textSize="@dimen/font_huge"
+                android:transitionName="title"
                 tools:text="Torrada Chique" />
 
             <android.support.v7.widget.AppCompatRatingBar
@@ -61,7 +61,8 @@
                 android:layout_height="wrap_content"
                 android:isIndicator="true"
                 android:numStars="5"
-                android:stepSize="0.5" />
+                android:stepSize="0.5"
+                android:transitionName="rating"/>
 
             <TextView
                 android:id="@+id/textDescription"

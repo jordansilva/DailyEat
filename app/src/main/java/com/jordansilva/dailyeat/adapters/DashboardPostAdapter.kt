@@ -42,9 +42,9 @@ class DashboardPostAdapter(private val context: Context,
         val item = data[position]
 
         holder.bindView(item)
-        holder.name.onClick { listener?.onRecipeClick(item) }
-        holder.description.onClick { listener?.onRecipeClick(item) }
-        holder.image.onClick { listener?.onRecipeClick(item) }
+        holder.name.onClick { view -> listener?.onRecipeClick(holder.itemView!!, item) }
+        holder.description.onClick { view -> listener?.onRecipeClick(holder.itemView!!, item) }
+        holder.image.onClick { view -> listener?.onRecipeClick(holder.itemView!!, item) }
         holder.btnLike.onClick {
             item.liked = !item.liked
             holder.animateLikeButton(it, item.liked, true)
@@ -112,7 +112,7 @@ class DashboardPostAdapter(private val context: Context,
     }
 
     interface DashboardPostListener {
-        fun onRecipeClick(item: DashboardPost)
+        fun onRecipeClick(view : View, item: DashboardPost)
         fun onLikeClick(item: DashboardPost)
     }
 }

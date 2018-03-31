@@ -12,7 +12,7 @@ import java.util.*
  */
 class Mock(var context: Context) {
     fun mockUsers(): List<User> {
-        var users = ArrayList<User>()
+        val users = ArrayList<User>()
 
         users.add(UserBuilder()
                 .name("Jordan Silva")
@@ -91,6 +91,7 @@ class Mock(var context: Context) {
                     date = calendar.time)
             item.rating = Random().nextFloat() * 5f
             item.amountRatings = Random().nextInt(500)
+            item.tags = arrayListOf("Vegan", "Italian", "Brazilian")
             data.add(item)
         }
 

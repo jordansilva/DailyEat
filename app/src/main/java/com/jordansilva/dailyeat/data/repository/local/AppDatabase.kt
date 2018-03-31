@@ -9,17 +9,19 @@ import com.jordansilva.dailyeat.data.model.Recipe
 import com.jordansilva.dailyeat.data.model.User
 import com.jordansilva.dailyeat.data.repository.DataConverter
 
-@Database(entities = arrayOf(User::class, Recipe::class), version = 1)
+@Database(entities = arrayOf(User::class, Recipe::class), version = AppDatabase.VERSION)
 @TypeConverters(DataConverter::class)
 abstract class AppDatabase : RoomDatabase() {
+
 
     abstract fun userDao(): UsersDao
     abstract fun recipeDao(): RecipesDao
 
     companion object {
 
-        private var INSTANCE: AppDatabase? = null
+        const val VERSION = 1
 
+        private var INSTANCE: AppDatabase? = null
         private val lock = Any()
 
         fun getInstance(context: Context): AppDatabase {

@@ -6,83 +6,32 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginTop="-60dp"
-    android:paddingEnd="@dimen/padding_medium"
-    android:paddingStart="@dimen/padding_medium"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.jordansilva.dailyeat.ui.recipe.RecipeDetailActivity"
     tools:showIn="@layout/activity_recipe_detail">
 
 
-    <android.support.v7.widget.CardView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        app:cardBackgroundColor="@android:color/white"
-        app:cardCornerRadius="2dp"
-        app:cardElevation="1dp"
-        app:contentPadding="@dimen/padding_medium">
+
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/layout_recipe_header"
+            android:paddingEnd="@dimen/padding_medium"
+            android:paddingStart="@dimen/padding_medium" />
+
+        <!-- Section Ingredients -->
+        <include
+            layout="@layout/layout_recipe_ingredients"
+            android:paddingEnd="@dimen/padding_medium"
+            android:paddingStart="@dimen/padding_medium" />
+
+        <!-- Section Similar -->
+        <include layout="@layout/layout_similar_recipes" />
 
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/textTitle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/sf_ui"
-                    android:textColor="@color/dark_gray"
-                    android:textSize="@dimen/font_huge"
-                    tools:text="Thai Long" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:orientation="horizontal">
-
-                <android.support.v7.widget.AppCompatRatingBar
-                    android:id="@+id/ratingBar"
-                    style="?android:attr/ratingBarStyleSmall"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:isIndicator="true"
-                    android:numStars="5"
-                    android:stepSize="0.5" />
-
-                <TextView
-                    android:id="@+id/textRating"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/padding_tiny"
-                    android:fontFamily="@font/sf_ui_semibold"
-                    android:textColor="@color/pink"
-                    android:textSize="@dimen/font_small"
-                    tools:text="4.6" />
-
-                <TextView
-                    android:id="@+id/textReviews"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="4dp"
-                    android:fontFamily="@font/sf_ui_semibold"
-                    android:textColor="@color/gray"
-                    android:textSize="@dimen/font_small"
-                    tools:text="(142 Reviews)" />
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-    </android.support.v7.widget.CardView>
+    </LinearLayout>
 
 </android.support.v4.widget.NestedScrollView>

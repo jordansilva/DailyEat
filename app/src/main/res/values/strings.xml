@@ -114,4 +114,9 @@
     <string name="title_activity_recipe_detail">RecipeDetailActivity</string>
     <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sodales velit eget lobortis molestie. Vivamus ac neque ac lectus luctus mollis ac vitae erat. Aliquam vehicula eros ultrices enim tempor, eu tempus neque efficitur. Cras pretium mauris egestas, consequat mi ut, interdum velit. Nam lobortis consectetur eleifend.</string>
     <string name="reviews">Reviews</string>
+    <string name="similar">Similar</string>
+    <string name="dot">•</string>
+    <string name="similar_recipes">Similar Recipes</string>
+    <string name="num_recipes">%d Recipes</string>
+    <string name="ingredients">Ingredients</string>
 </resources>
