@@ -1,14 +1,12 @@
 package app.jordansilva.domain.repository
 
 import app.jordansilva.domain.model.Feed
-import io.reactivex.Completable
-import io.reactivex.Single
 
 interface FeedRepository {
 
-    fun getUserFeeds(): Single<List<Feed>>
+    fun getUserFeeds(): List<Feed>
 
-    fun favouriteFeed(feedId: Feed): Completable
+    fun favouriteFeed(feedId: Feed): Void
 
-    fun unFavouriteFeed(feedId: String): Completable
+    fun unFavouriteFeed(feedId: String): Void
 }

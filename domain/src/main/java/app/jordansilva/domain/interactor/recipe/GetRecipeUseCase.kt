@@ -1,13 +1,13 @@
 package app.jordansilva.domain.interactor.recipe
 
-import app.jordansilva.domain.interactor.SingleUseCaseWithParameter
+import app.jordansilva.domain.interactor.BaseUseCase
+import app.jordansilva.domain.interactor.SimpleUseCaseWithParameter
 import app.jordansilva.domain.model.Recipe
 import app.jordansilva.domain.repository.RecipeRepository
-import io.reactivex.Single
 
-class GetRecipeUseCase(var recipeRepository: RecipeRepository) : SingleUseCaseWithParameter<String, Recipe> {
+class GetRecipeUseCase(var recipeRepository: RecipeRepository) : BaseUseCase(), SimpleUseCaseWithParameter<String, Recipe> {
 
-    override fun execute(recipeId: String): Single<Recipe> {
+    override suspend fun execute(recipeId: String): Recipe {
         return recipeRepository.getRecipe(recipeId)
     }
 

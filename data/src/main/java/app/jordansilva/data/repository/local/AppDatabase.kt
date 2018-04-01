@@ -5,12 +5,14 @@ import android.arch.persistence.room.Room
 import android.arch.persistence.room.RoomDatabase
 import android.arch.persistence.room.TypeConverters
 import android.content.Context
-import com.jordansilva.dailyeat.data.model.Recipe
-import com.jordansilva.dailyeat.data.model.User
-import app.jordansilva.data.repository.local.converter.DataConverter
+import app.jordansilva.data.model.RecipeModel
+import app.jordansilva.data.model.UserModel
+import app.jordansilva.data.repository.local.converter.DateConverter
+import app.jordansilva.data.repository.local.converter.RecipeIngredientConverter
 
-@Database(entities = arrayOf(User::class, Recipe::class), version = AppDatabase.VERSION)
-@TypeConverters(DataConverter::class)
+@Database(entities = [(UserModel::class), (RecipeModel::class)],
+        version = AppDatabase.VERSION)
+@TypeConverters(DateConverter::class, RecipeIngredientConverter::class)
 abstract class AppDatabase : RoomDatabase() {
 
 
@@ -28,8 +30,8 @@ abstract class AppDatabase : RoomDatabase() {
             synchronized(lock) {
                 if (INSTANCE == null) {
                     INSTANCE = Room.databaseBuilder(context.applicationContext,
-                            AppDatabase::class.java,
-                            "database.db").build()
+                            AppDatabase::class.java, "database.db")
+                            .build()
                 }
                 return INSTANCE!!
             }

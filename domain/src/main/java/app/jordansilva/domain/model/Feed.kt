@@ -2,7 +2,7 @@ package app.jordansilva.domain.model
 
 import java.util.*
 
-data class Feed(val id: UUID, val name: String, val description: String, val imageUrl: String,
+data class Feed(val id: UUID, val recipeId: UUID, val name: String, val description: String, val imageUrl: String,
                 val authorId: UUID, var authorName: String, var authorAvatar: String,
                 var created: Date) {
 
@@ -13,4 +13,5 @@ data class Feed(val id: UUID, val name: String, val description: String, val ima
     var cooked: Boolean = false
     var liked: Boolean = false
     var saved: Boolean = false
+
 }

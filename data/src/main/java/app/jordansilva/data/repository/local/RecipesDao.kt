@@ -1,7 +1,7 @@
 package app.jordansilva.data.repository.local
 
 import android.arch.persistence.room.*
-import com.jordansilva.dailyeat.data.model.Recipe
+import app.jordansilva.data.model.RecipeModel
 
 /**
  * Created by jordansilva on 18/03/18.
@@ -14,14 +14,14 @@ import com.jordansilva.dailyeat.data.model.Recipe
      * @param userId the user id.
      * @return list of recipes.
      */
-    @Query("SELECT * FROM Recipes WHERE userId = :userId") fun getRecipesByUser(userId: String): List<Recipe>?
+    @Query("SELECT * FROM Recipes WHERE userId = :userId") fun getRecipesByUser(userId: String): List<RecipeModel>?
 
     /**
      * Insert a recipe in the database. If the recipe already exists, replace it.
      *
      * @param recipe to be inserted.
      */
-    @Insert(onConflict = OnConflictStrategy.REPLACE) fun insertRecipe(recipe: Recipe)
+    @Insert(onConflict = OnConflictStrategy.REPLACE) fun insertRecipe(recipe: RecipeModel)
 
     /**
      * Update a recipe.
@@ -29,7 +29,7 @@ import com.jordansilva.dailyeat.data.model.Recipe
      * @param recipe recipe to be updated
      * @return the number of recipes updated. This should always be 1.
      */
-    @Update fun updateRecipe(recipe: Recipe): Int
+    @Update fun updateRecipe(recipe: RecipeModel): Int
 
 
     /**

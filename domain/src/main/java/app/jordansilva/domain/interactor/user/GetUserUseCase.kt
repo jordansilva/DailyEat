@@ -1,13 +1,13 @@
 package app.jordansilva.domain.interactor.user
 
-import app.jordansilva.domain.interactor.SingleUseCaseWithParameter
+import app.jordansilva.domain.interactor.BaseUseCase
+import app.jordansilva.domain.interactor.SimpleUseCaseWithParameter
 import app.jordansilva.domain.model.User
 import app.jordansilva.domain.repository.UserRepository
-import io.reactivex.Single
 
-class GetUserUseCase(var userRepository: UserRepository) : SingleUseCaseWithParameter<String, User> {
+class GetUserUseCase(var userRepository: UserRepository) : BaseUseCase(), SimpleUseCaseWithParameter<String, User> {
 
-    override fun execute(userId: String): Single<User> {
+    override suspend fun execute(userId: String): User {
         return userRepository.getUser(userId)
     }
 

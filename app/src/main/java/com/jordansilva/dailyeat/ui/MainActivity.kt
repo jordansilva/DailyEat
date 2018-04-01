@@ -11,13 +11,13 @@ import android.view.View
 import android.view.Window
 import android.view.animation.AlphaAnimation
 import com.jordansilva.dailyeat.R
-import com.jordansilva.dailyeat.ui.dashboard.DashboardFragment
+import com.jordansilva.dailyeat.ui.feed.FeedFragment
 import com.jordansilva.dailyeat.util.disableShiftMode
+import com.jordansilva.dailyeat.util.notNull
 import com.jordansilva.dailyeat.util.typeface
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.find
 import org.jetbrains.anko.toast
-import com.jordansilva.dailyeat.util.notNull
 
 
 class MainActivity : BaseActivity() {
@@ -25,7 +25,7 @@ class MainActivity : BaseActivity() {
     private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         return@OnNavigationItemSelectedListener when (item.itemId) {
             R.id.navigation_dashboard -> {
-                replaceFragment(DashboardFragment.newInstance())
+                replaceFragment(FeedFragment.newInstance())
                 true
             }
             R.id.navigation_bio -> {
@@ -90,7 +90,7 @@ class MainActivity : BaseActivity() {
     }
 
     fun initFragments() {
-        replaceFragment(DashboardFragment.newInstance())
+        replaceFragment(FeedFragment.newInstance())
     }
 
     fun replaceFragment(fragment: Fragment) {
