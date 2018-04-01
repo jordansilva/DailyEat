@@ -72,7 +72,6 @@ class FeedFragment : BaseFragment(), FeedAdapter.FeedListener {
         adapter.updateItems(data)
     }
 
-
     override fun onRecipeClick(view: View, item: FeedView) {
         activity?.let {
             val intent = Intent(activity, RecipeDetailActivity::class.java)

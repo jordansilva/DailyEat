@@ -11,9 +11,10 @@ import app.jordansilva.data.repository.local.converter.RecipeIngredientModelConv
         parentColumns = ["id"],
         childColumns = ["userId"]))])
 data class RecipeModel(@PrimaryKey val id: String,
-                       val name: String,
-                       val description: String,
-                       val userId: String = "") : BaseModel() {
+                       var name: String,
+                       var description: String,
+                       var imageUrl: String,
+                       var userId: String = "") : BaseModel() {
 
     @TypeConverters(RecipeIngredientModelConverter::class)
     var ingredients: List<RecipeIngredientModel>? = null

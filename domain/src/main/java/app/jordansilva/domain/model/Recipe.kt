@@ -3,6 +3,7 @@ package app.jordansilva.domain.model
 data class Recipe(val id: String,
                   var name: String,
                   var description: String,
+                  var imageUrl: String,
                   var user: User,
                   var ingredients: List<RecipeIngredient>? = null) {
 

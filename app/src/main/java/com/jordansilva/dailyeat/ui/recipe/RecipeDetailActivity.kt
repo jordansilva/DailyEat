@@ -1,5 +1,6 @@
 package com.jordansilva.dailyeat.ui.recipe
 
+import android.arch.lifecycle.Observer
 import android.os.Bundle
 import android.support.design.widget.AppBarLayout
 import android.support.design.widget.CoordinatorLayout
@@ -17,6 +18,7 @@ import com.jordansilva.dailyeat.ui.BaseActivity
 import com.jordansilva.dailyeat.util.Mock
 import com.jordansilva.dailyeat.util.format
 import com.jordansilva.dailyeat.util.loadUrl
+import com.jordansilva.dailyeat.util.notNull
 import kotlinx.android.synthetic.main.activity_recipe_detail.*
 import kotlinx.android.synthetic.main.content_recipe_detail.*
 import kotlinx.android.synthetic.main.layout_recipe_header.*
@@ -25,56 +27,52 @@ import kotlinx.android.synthetic.main.layout_similar_recipes.*
 import org.jetbrains.anko.ctx
 import org.jetbrains.anko.find
 import org.jetbrains.anko.toast
+import org.koin.android.architecture.ext.viewModel
 
 class RecipeDetailActivity : BaseActivity(), RecipeAdapter.RecipeListener {
+
     companion object {
         val EXTRA_RECIPE = "RecipeDetailActivity.EXTRA_RECIPE"
     }
 
-    private lateinit var mock: RecipeView
+    private lateinit var recipeId: String
+    private val viewModel by viewModel<RecipeDetailViewModel>()
+    private var recipe: RecipeView? = null
     private var nestedViewTopMargin: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//
-//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-//            window.requestFeature(Window.FEATURE_CONTENT_TRANSITIONS)
-//
-//            val transition = Fade()
-//            transition.excludeTarget(R.id.navigation, true)
-//            transition.excludeTarget(android.R.id.statusBarBackground, true)
-//            transition.excludeTarget(android.R.id.navigationBarBackground, true)
-//            transition.excludeTarget(resources.getIdentifier("action_bar_container", "id", "android"), true)
-//
-//            window.enterTransition = transition
-//            window.exitTransition = transition
-//        }
-
         setContentView(R.layout.activity_recipe_detail)
         supportPostponeEnterTransition()
 
-        mock = intent.getSerializableExtra(EXTRA_RECIPE) as RecipeView
-
+        recipeId = intent.getStringExtra(EXTRA_RECIPE)
+        recipe = viewModel.getRecipeById(recipeId).value
+        viewModel.recipe.observe(this, Observer {
+            recipe = it
+            configureRecipe()
+        })
         setupUI()
     }
 
-    fun setupUI() {
-        loadHeader()
+    private fun setupUI() {
+        configureRecipe()
         loadIngredients()
         loadSimilarRecipes()
     }
 
-    private fun loadHeader() {
-        textTitle.text = mock.name
-        ratingBar.rating = mock.rating
-        ratingBar.invalidate()
-        textRating.text = mock.rating.format("%.1f")
-        textReviews.text = String.format("(%d %s)", mock.amountRatings, getString(R.string.reviews))
-        tagGroup.setTags(mock.tags)
+    private fun configureRecipe() {
+        recipe.notNull {
+            textTitle.text = it.name
+            ratingBar.rating = it.rating
+            ratingBar.invalidate()
+            textRating.text = it.rating.format("%.1f")
+            textReviews.text = String.format("(%d %s)", it.amountRatings, getString(R.string.reviews))
+            tagGroup.setTags(it.tags)
 
-        imageRecipe.loadUrl(mock.imageUrl,
-                { supportStartPostponedEnterTransition() },
-                { supportStartPostponedEnterTransition() })
+            imageRecipe.loadUrl(it.imageUrl,
+                    { supportStartPostponedEnterTransition() },
+                    { supportStartPostponedEnterTransition() })
+        }
     }
 
     private fun loadIngredients() {
@@ -147,7 +145,7 @@ class RecipeDetailActivity : BaseActivity(), RecipeAdapter.RecipeListener {
     }
 
     private fun actionBarCollapsed() {
-        supportActionBar?.title = mock.name
+        recipe.notNull { supportActionBar?.title = it.name }
         val layoutParams = nestedScrollView.layoutParams as CoordinatorLayout.LayoutParams
         layoutParams.topMargin = 0
         nestedScrollView.layoutParams = layoutParams

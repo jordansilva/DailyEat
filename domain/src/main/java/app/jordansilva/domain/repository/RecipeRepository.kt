@@ -4,9 +4,9 @@ import app.jordansilva.domain.model.Recipe
 
 interface RecipeRepository {
 
-    fun getRecipe(recipeId: String): Recipe
+    suspend fun getRecipe(recipeId: String): Recipe
 
-    fun getUserRecipes(userId: String): List<Recipe>
+    suspend fun getUserRecipes(userId: String): List<Recipe>
 
     fun saveRecipe(recipe: Recipe): Void
 

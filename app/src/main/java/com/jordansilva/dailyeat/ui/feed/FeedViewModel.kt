@@ -14,7 +14,8 @@ import retrofit2.HttpException
 /**
  * Created by jordansilva on 18/03/18.
  */
-class FeedViewModel(val feedsUseCase: GetUserFeedsUseCase, val mapper: MapperView<FeedView, Feed>) : BaseViewModel() {
+class FeedViewModel(private val feedsUseCase: GetUserFeedsUseCase,
+                    private val mapper: MapperView<FeedView, Feed>) : BaseViewModel() {
 
     private var feeds: MutableLiveData<List<FeedView>> = MutableLiveData()
 

@@ -5,7 +5,7 @@ data class RecipeView(val id: String,
                       var description: String,
                       var imageUrl: String,
                       var authorId: String,
-                      var authorAvatar: String,
+                      var authorAvatar: String?,
                       var authorName: String,
                       var ingredients: List<RecipeIngredientView>? = null) {
 
