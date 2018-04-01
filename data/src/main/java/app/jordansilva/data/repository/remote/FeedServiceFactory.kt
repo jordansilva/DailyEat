@@ -1,5 +1,6 @@
 package app.jordansilva.data.repository.remote
 
+import app.jordansilva.data.util.Constants
 import com.google.gson.FieldNamingPolicy
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
@@ -17,7 +18,6 @@ import java.util.concurrent.TimeUnit
 object FeedServiceFactory {
 
     fun makeFeedService(isDebug: Boolean): ApiFeedService {
-
         val logginInterceptor = makeLoggingInterceptor(isDebug)
         val okHttpClient = makeOkHttpClient(logginInterceptor)
         return makeFeedService(okHttpClient, makeGson())
@@ -25,7 +25,7 @@ object FeedServiceFactory {
 
     private fun makeFeedService(okHttpClient: OkHttpClient, gson: Gson): ApiFeedService {
         val retrofit = Retrofit.Builder()
-                .baseUrl("https://dailyeat.com/api/feed/")
+                .baseUrl(Constants.GITHUB_URL)
                 .addCallAdapterFactory(CoroutineCallAdapterFactory())
                 .client(okHttpClient)
                 .addConverterFactory(GsonConverterFactory.create(gson))

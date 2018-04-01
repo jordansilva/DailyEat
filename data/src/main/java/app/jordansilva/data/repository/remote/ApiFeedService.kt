@@ -5,8 +5,8 @@ import kotlinx.coroutines.experimental.Deferred
 import retrofit2.http.GET
 
 interface ApiFeedService {
-
-    @GET("./")
+    
+    @GET("feed.json")
     fun getUserFeeds(): Deferred<List<Feed>>
 
 }

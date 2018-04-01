@@ -25,12 +25,14 @@ import org.jetbrains.anko.find
 import org.jetbrains.anko.support.v4.ctx
 import org.jetbrains.anko.support.v4.toast
 import org.koin.android.architecture.ext.viewModel
+import org.koin.android.ext.android.inject
 
 
 class FeedFragment : BaseFragment(), FeedAdapter.FeedListener {
 
     private lateinit var adapter: FeedAdapter
     private val viewModel by viewModel<FeedViewModel>()
+    private val gson : Gson by inject()
 
     companion object {
         fun newInstance(): FeedFragment {
@@ -55,9 +57,6 @@ class FeedFragment : BaseFragment(), FeedAdapter.FeedListener {
     }
 
     fun getUserFeeds() {
-        val jsonData = ArrayList(Mock(context!!).mockList())
-        val json = Gson().toJson(jsonData)
-
         val data = viewModel.getFeeds().value ?: listOf()
 
         adapter = FeedAdapter(context!!, data, this)
