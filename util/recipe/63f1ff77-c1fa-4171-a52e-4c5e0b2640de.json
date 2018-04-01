@@ -1,0 +1,16 @@
+{
+  "amount_cooked": 0,
+  "amount_likes": 0,
+  "author_avatar": "https://scontent.fplu4-1.fna.fbcdn.net/v/t1.0-9/19399978_1400278856720551_3922684003310603527_n.jpg?oh=12ccf2caddc512e79d6786c6f559990b&oe=5B4CB614",
+  "author_id": "0eb2bf5a-2711-43dc-8d0a-8ad48dfacc83",
+  "author_name": "Raissa Guerra",
+  "cooked": false,
+  "created": "2018-04-01T09:33:23.950Z",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sodales velit eget lobortis molestie. Vivamus ac neque ac lectus luctus mollis ac vitae erat. Aliquam vehicula eros ultrices enim tempor, eu tempus neque efficitur. Cras pretium mauris egestas, consequat mi ut, interdum velit. Nam lobortis consectetur eleifend.",
+  "id": "357d63c2-7937-46b4-96ec-5095c86b7b17",
+  "image_url": "https://images.unsplash.com/photo-1455853828816-0c301a011711?ixlib=rb-0.3.5&s=f087ed54c63956580923b24bfaa07db7&dpr=1&auto=format&fit=crop&w=1000&q=80&cs=tinysrgb",
+  "liked": false,
+  "name": "Food 4",
+  "recipe_id": "63f1ff77-c1fa-4171-a52e-4c5e0b2640de",
+  "saved": false
+}

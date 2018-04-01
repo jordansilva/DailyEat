@@ -1,0 +1,16 @@
+{
+  "amount_cooked": 0,
+  "amount_likes": 0,
+  "author_avatar": "https://scontent.fplu4-1.fna.fbcdn.net/v/t1.0-1/p160x160/12193340_1064666226906758_2247095994875982561_n.jpg?_nc_cat=0&oh=dd63556ab0f89f477a8e9dd062870734&oe=5B3AFDFB",
+  "author_id": "6898d4f0-e4e6-4a57-b0f8-5da9e96fff18",
+  "author_name": "Gibran Silva",
+  "cooked": false,
+  "created": "2018-03-31T22:33:23.950Z",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sodales velit eget lobortis molestie. Vivamus ac neque ac lectus luctus mollis ac vitae erat. Aliquam vehicula eros ultrices enim tempor, eu tempus neque efficitur. Cras pretium mauris egestas, consequat mi ut, interdum velit. Nam lobortis consectetur eleifend.",
+  "id": "71db4bd0-3d85-40f1-9fe3-7fd7e7cacde7",
+  "image_url": "https://images.unsplash.com/photo-1472926373053-51b220987527?ixlib=rb-0.3.5&s=eef0314e9f1903dac39e9587e3ab170f&dpr=1&auto=format&fit=crop&w=1000&q=80&cs=tinysrgb",
+  "liked": false,
+  "name": "Food 6",
+  "recipe_id": "56d7796a-a819-47d0-9b67-55b14e057a18",
+  "saved": false
+}

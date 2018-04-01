@@ -1,0 +1,16 @@
+{
+  "amount_cooked": 0,
+  "amount_likes": 0,
+  "author_avatar": "https://scontent.fplu4-1.fna.fbcdn.net/v/t1.0-9/26229367_10215722312197353_72208779691992113_n.jpg?oh=57077cb7e23b2c517586450ddf4a6ea2&oe=5B346889",
+  "author_id": "17054ece-b247-4cda-af89-cb4b79e2abc7",
+  "author_name": "Gabriela Boaventura",
+  "cooked": false,
+  "created": "2018-04-01T13:33:23.950Z",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sodales velit eget lobortis molestie. Vivamus ac neque ac lectus luctus mollis ac vitae erat. Aliquam vehicula eros ultrices enim tempor, eu tempus neque efficitur. Cras pretium mauris egestas, consequat mi ut, interdum velit. Nam lobortis consectetur eleifend.",
+  "id": "a1bab1e2-1ce6-48dc-b6ca-973d69d587af",
+  "image_url": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-0.3.5&s=dea3b438cb6e62d3e522e8e4886ec9a5&dpr=1&auto=format&fit=crop&w=1000&q=80&cs=tinysrgb",
+  "liked": false,
+  "name": "Food 3",
+  "recipe_id": "9d7925c8-2717-4d6e-9804-1310263dbef2",
+  "saved": false
+}

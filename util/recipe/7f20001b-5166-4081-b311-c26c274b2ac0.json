@@ -1,0 +1,16 @@
+{
+  "amount_cooked": 0,
+  "amount_likes": 0,
+  "author_avatar": "https://scontent.fsdu11-1.fna.fbcdn.net/v/t1.0-9/18403748_10212881587212658_7977014779724222797_n.jpg?oh=3584704ff3559c4fef00e9c3a1fd66d9&oe=5B29BD30",
+  "author_id": "4d285478-1101-46f8-907b-10338d0e0065",
+  "author_name": "Jordan Silva",
+  "cooked": false,
+  "created": "2018-03-27T03:33:23.950Z",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sodales velit eget lobortis molestie. Vivamus ac neque ac lectus luctus mollis ac vitae erat. Aliquam vehicula eros ultrices enim tempor, eu tempus neque efficitur. Cras pretium mauris egestas, consequat mi ut, interdum velit. Nam lobortis consectetur eleifend.",
+  "id": "2b6d2b3c-7563-4a52-8de6-39403e8f1814",
+  "image_url": "https://images.unsplash.com/photo-1464347744102-11db6282f854?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=1ddae735d7eb8c88b1c07f8b919140bf&dpr=1&auto=format&fit=crop&w=1000&q=80&cs=tinysrgb",
+  "liked": false,
+  "name": "Food 16",
+  "recipe_id": "7f20001b-5166-4081-b311-c26c274b2ac0",
+  "saved": false
+}

@@ -1,0 +1,16 @@
+{
+  "amount_cooked": 0,
+  "amount_likes": 0,
+  "author_avatar": "https://scontent.fplu4-1.fna.fbcdn.net/v/t1.0-9/26229367_10215722312197353_72208779691992113_n.jpg?oh=57077cb7e23b2c517586450ddf4a6ea2&oe=5B346889",
+  "author_id": "314e3a1a-21a1-4726-8d80-4fc741692c6e",
+  "author_name": "Gabriela Boaventura",
+  "cooked": false,
+  "created": "2018-03-29T00:33:23.950Z",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sodales velit eget lobortis molestie. Vivamus ac neque ac lectus luctus mollis ac vitae erat. Aliquam vehicula eros ultrices enim tempor, eu tempus neque efficitur. Cras pretium mauris egestas, consequat mi ut, interdum velit. Nam lobortis consectetur eleifend.",
+  "id": "cd657ac5-6fc9-4794-92f7-671042441fa1",
+  "image_url": "https://images.unsplash.com/photo-1508709315803-6342a28d32a1?ixlib=rb-0.3.5&s=edfa7412f3aa832cd56b9a62240be4a2&dpr=1&auto=format&fit=crop&w=1000&q=80&cs=tinysrgb",
+  "liked": false,
+  "name": "Food 13",
+  "recipe_id": "638145cc-997a-4c95-ae13-d4a4e734aff0",
+  "saved": false
+}

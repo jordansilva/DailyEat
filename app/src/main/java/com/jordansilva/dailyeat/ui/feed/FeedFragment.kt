@@ -17,7 +17,6 @@ import com.jordansilva.dailyeat.adapters.FeedAdapter
 import com.jordansilva.dailyeat.model.FeedView
 import com.jordansilva.dailyeat.ui.BaseFragment
 import com.jordansilva.dailyeat.ui.recipe.RecipeDetailActivity
-import com.jordansilva.dailyeat.util.Mock
 import com.jordansilva.dailyeat.util.mapToTypedArray
 import com.jordansilva.dailyeat.util.whenNotNull
 import kotlinx.android.synthetic.main.fragment_dashboard.*

@@ -1,0 +1,16 @@
+{
+  "amount_cooked": 0,
+  "amount_likes": 0,
+  "author_avatar": "https://scontent.fplu4-1.fna.fbcdn.net/v/t1.0-9/17904451_1504394522927904_8378189893043632896_n.jpg?_nc_cat=0&oh=7530ad5d092c92b3e38ec1732e9f229c&oe=5B346577",
+  "author_id": "13634265-2fc2-4350-8a6a-e918c7ef495c",
+  "author_name": "Ana Paula Gomes",
+  "cooked": false,
+  "created": "2018-04-01T18:33:23.950Z",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sodales velit eget lobortis molestie. Vivamus ac neque ac lectus luctus mollis ac vitae erat. Aliquam vehicula eros ultrices enim tempor, eu tempus neque efficitur. Cras pretium mauris egestas, consequat mi ut, interdum velit. Nam lobortis consectetur eleifend.",
+  "id": "cc6aed50-23b3-4b32-a1a5-9664ad498a8e",
+  "image_url": "https://images.unsplash.com/photo-1460306855393-0410f61241c7?ixlib=rb-0.3.5&s=d87994e9265127c6cea87d9ee4b87f18&dpr=1&auto=format&fit=crop&w=1000&q=80&cs=tinysrgb",
+  "liked": false,
+  "name": "Food 1",
+  "recipe_id": "8f2ec3c9-66a2-4967-8ccc-e06ca6bbf56f",
+  "saved": false
+}
