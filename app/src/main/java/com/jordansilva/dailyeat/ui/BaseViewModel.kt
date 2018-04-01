@@ -4,6 +4,7 @@ import android.arch.lifecycle.ViewModel
 import android.support.annotation.CallSuper
 import kotlinx.coroutines.experimental.CoroutineScope
 import kotlinx.coroutines.experimental.Job
+import kotlinx.coroutines.experimental.android.UI
 import kotlinx.coroutines.experimental.launch
 
 abstract class BaseViewModel : ViewModel() {
@@ -13,7 +14,7 @@ abstract class BaseViewModel : ViewModel() {
     @CallSuper
     @Synchronized
     protected fun launchAsync(block: suspend CoroutineScope.() -> Unit) {
-        val job: Job = launch { block() }
+        val job: Job = launch(UI) { block() }
         asyncJobs.add(job)
         job.invokeOnCompletion { asyncJobs.remove(job) }
     }

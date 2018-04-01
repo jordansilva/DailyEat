@@ -13,7 +13,7 @@ import com.jordansilva.dailyeat.ui.BaseViewModel
  */
 class FeedViewModel(val feedsUseCase: GetUserFeedsUseCase, val mapper: MapperView<FeedView, Feed>) : BaseViewModel() {
 
-    private lateinit var feeds: MutableLiveData<List<FeedView>>
+    private var feeds: MutableLiveData<List<FeedView>> = MutableLiveData()
 
     init {
         fetchFeeds()

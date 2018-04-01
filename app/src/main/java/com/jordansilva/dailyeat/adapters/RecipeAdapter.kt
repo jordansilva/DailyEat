@@ -7,19 +7,19 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.jordansilva.dailyeat.R
-import app.jordansilva.domain.model.DashboardPost
+import com.jordansilva.dailyeat.model.RecipeView
 import com.jordansilva.dailyeat.util.loadUrlWithTransformation
+import com.jordansilva.dailyeat.util.px
 import jp.wasabeef.picasso.transformations.RoundedCornersTransformation
 import kotlinx.android.synthetic.main.item_dashboard_recipe.view.*
 import org.jetbrains.anko.sdk25.coroutines.onClick
-import com.jordansilva.dailyeat.util.px
 
 
 /**
  * Created by jordansilva on 18/03/18.
  */
 class RecipeAdapter(private val context: Context,
-                    private val data: List<DashboardPost>,
+                    private val data: List<RecipeView>,
                     private val listener: RecipeListener?) : RecyclerView.Adapter<RecipeAdapter.ItemViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
@@ -51,17 +51,17 @@ class RecipeAdapter(private val context: Context,
         val author = itemView.textAuthor
 
         @SuppressLint("RestrictedApi")
-        fun bindView(context: Context, item: DashboardPost) {
+        fun bindView(context: Context, item: RecipeView) {
 
             name.text = item.name
             description.text = item.description
             image.loadUrlWithTransformation(item.imageUrl, RoundedCornersTransformation(4.px, 0))
-            author.text = item.author
+            author.text = item.authorName
         }
 
     }
 
     interface RecipeListener {
-        fun onRecipeClick(view: View, item: DashboardPost)
+        fun onRecipeClick(view: View, item: RecipeView)
     }
 }

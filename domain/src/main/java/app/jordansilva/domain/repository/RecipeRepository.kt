@@ -1,22 +1,20 @@
 package app.jordansilva.domain.repository
 
 import app.jordansilva.domain.model.Recipe
-import io.reactivex.Completable
-import io.reactivex.Single
 
 interface RecipeRepository {
 
-    fun getRecipe(recipeId: String): Single<Recipe>
+    fun getRecipe(recipeId: String): Recipe
 
-    fun getUserRecipes(userId: String): Single<List<Recipe>>
+    fun getUserRecipes(userId: String): List<Recipe>
 
-    fun saveRecipe(recipe: Recipe): Completable
+    fun saveRecipe(recipe: Recipe): Void
 
-    fun deleteRecipeById(recipeId: String): Completable
+    fun deleteRecipeById(recipeId: String): Void
 
-    fun deleteAllRecipes(): Completable
+    fun deleteAllRecipes(): Void
 
-    fun getFavouriteRecipes(): Single<List<Recipe>>
+    fun getFavouriteRecipes(): List<Recipe>
 
-    fun markRecipeAsCooked(recipe: Recipe): Completable
+    fun markRecipeAsCooked(recipe: Recipe): Void
 }

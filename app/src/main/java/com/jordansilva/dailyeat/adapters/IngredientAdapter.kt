@@ -9,7 +9,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.jordansilva.dailyeat.R
-import app.jordansilva.data.model.RecipeIngredient
+import com.jordansilva.dailyeat.model.RecipeIngredientView
 import kotlinx.android.synthetic.main.item_dashboard_recipe.view.*
 
 
@@ -17,7 +17,7 @@ import kotlinx.android.synthetic.main.item_dashboard_recipe.view.*
  * Created by jordansilva on 18/03/18.
  */
 class IngredientAdapter(private val context: Context,
-                        private val data: List<RecipeIngredient>) : RecyclerView.Adapter<IngredientAdapter.ItemViewHolder>() {
+                        private val data: List<RecipeIngredientView>) : RecyclerView.Adapter<IngredientAdapter.ItemViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.item_ingredient, parent, false)
@@ -40,7 +40,7 @@ class IngredientAdapter(private val context: Context,
         val name = itemView.textName
 
         @SuppressLint("RestrictedApi")
-        fun bindView(context: Context, item: RecipeIngredient) {
+        fun bindView(context: Context, item: RecipeIngredientView) {
             val text = String.format("<b>%.1f %s</b> %s", item.amount, item.amountType, item.name)
 
             name.text = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {

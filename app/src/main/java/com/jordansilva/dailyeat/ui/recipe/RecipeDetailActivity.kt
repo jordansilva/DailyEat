@@ -11,10 +11,11 @@ import android.view.animation.AnimationUtils
 import com.jordansilva.dailyeat.R
 import com.jordansilva.dailyeat.adapters.IngredientAdapter
 import com.jordansilva.dailyeat.adapters.RecipeAdapter
-import app.jordansilva.domain.model.DashboardPost
-import app.jordansilva.data.model.RecipeIngredient
+import com.jordansilva.dailyeat.model.RecipeIngredientView
+import com.jordansilva.dailyeat.model.RecipeView
 import com.jordansilva.dailyeat.ui.BaseActivity
 import com.jordansilva.dailyeat.util.Mock
+import com.jordansilva.dailyeat.util.format
 import com.jordansilva.dailyeat.util.loadUrl
 import kotlinx.android.synthetic.main.activity_recipe_detail.*
 import kotlinx.android.synthetic.main.content_recipe_detail.*
@@ -30,7 +31,7 @@ class RecipeDetailActivity : BaseActivity(), RecipeAdapter.RecipeListener {
         val EXTRA_RECIPE = "RecipeDetailActivity.EXTRA_RECIPE"
     }
 
-    private lateinit var mock: DashboardPost
+    private lateinit var mock: RecipeView
     private var nestedViewTopMargin: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -52,7 +53,7 @@ class RecipeDetailActivity : BaseActivity(), RecipeAdapter.RecipeListener {
         setContentView(R.layout.activity_recipe_detail)
         supportPostponeEnterTransition()
 
-        mock = intent.getSerializableExtra(EXTRA_RECIPE) as DashboardPost
+        mock = intent.getSerializableExtra(EXTRA_RECIPE) as RecipeView
 
         setupUI()
     }
@@ -79,9 +80,9 @@ class RecipeDetailActivity : BaseActivity(), RecipeAdapter.RecipeListener {
     private fun loadIngredients() {
         val animation = AnimationUtils.loadLayoutAnimation(ctx, R.anim.layout_animation_fall_down)
 
-        val ingredients = ArrayList<RecipeIngredient>()
+        val ingredients = ArrayList<RecipeIngredientView>()
         for (i in 0..7) {
-            ingredients.add(RecipeIngredient("Ingredient $i", i + 1.toFloat(), "can"))
+            ingredients.add(RecipeIngredientView("Ingredient $i", i + 1.toFloat(), "can"))
         }
 
         recyclerIngredients.adapter = IngredientAdapter(this@RecipeDetailActivity, ingredients)
@@ -100,7 +101,7 @@ class RecipeDetailActivity : BaseActivity(), RecipeAdapter.RecipeListener {
 
         val animation = AnimationUtils.loadLayoutAnimation(ctx, R.anim.layout_animation_fall_down)
 
-        recyclerSimilarRecipes.adapter = RecipeAdapter(this@RecipeDetailActivity, data.take(numberOfSimilarRecipes), this)
+        recyclerSimilarRecipes.adapter = RecipeAdapter(this@RecipeDetailActivity, listOf(), this)
         recyclerSimilarRecipes.layoutManager = LinearLayoutManager(this@RecipeDetailActivity, LinearLayoutManager.HORIZONTAL, false)
         recyclerSimilarRecipes.layoutAnimation = animation
         recyclerSimilarRecipes.scheduleLayoutAnimation()
@@ -162,7 +163,7 @@ class RecipeDetailActivity : BaseActivity(), RecipeAdapter.RecipeListener {
         return super.onOptionsItemSelected(item)
     }
 
-    override fun onRecipeClick(view: View, item: DashboardPost) {
+    override fun onRecipeClick(view: View, item: RecipeView) {
         toast(item.name).show()
     }
 

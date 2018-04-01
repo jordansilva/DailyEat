@@ -1,9 +1,9 @@
 package com.jordansilva.dailyeat.util
 
 import android.content.Context
-import com.jordansilva.dailyeat.R
-import app.jordansilva.domain.model.DashboardPost
 import app.jordansilva.domain.model.User
+import com.jordansilva.dailyeat.R
+import com.jordansilva.dailyeat.model.FeedView
 import java.util.*
 
 /**
@@ -69,8 +69,8 @@ class Mock(var context: Context) {
         return images
     }
 
-    fun mockList(): List<DashboardPost> {
-        val data = ArrayList<DashboardPost>()
+    fun mockList(): List<FeedView> {
+        val data = ArrayList<FeedView>()
 
         //Mock
         val images = mockImages()
@@ -80,22 +80,25 @@ class Mock(var context: Context) {
         for (i in 0..16) {
             calendar.add(Calendar.HOUR_OF_DAY, i * -1)
             val user = users.random()!!
-            val item = DashboardPost(UUID.randomUUID(),
+            val item = FeedView(UUID.randomUUID().toString(),
+                    recipeId = UUID.randomUUID().toString(),
                     name = "Food $i",
                     description = context.getString(R.string.lorem_ipsum),
                     imageUrl = images[i],
-                    authorId = UUID.randomUUID(),
-                    author = user.name,
-                    avatar = user.avatar!!,
-                    date = calendar.time)
-            item.rating = Random().nextFloat() * 5f
-            item.amountRatings = Random().nextInt(500)
-            item.tags = arrayListOf("Vegan", "Italian", "Brazilian")
+                    authorId = UUID.randomUUID().toString(),
+                    authorName = user.name,
+                    authorAvatar = user.avatar!!,
+                    created = calendar.time)
+//            item.rating = Random().nextFloat() * 5f
+//            item.amountRatings = Random().nextInt(500)
+//            item.tags = arrayListOf("Vegan", "Italian", "Brazilian")
             data.add(item)
         }
 
         return data
     }
+
+
 
     class UserBuilder {
 

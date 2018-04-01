@@ -7,14 +7,12 @@ import android.arch.persistence.room.TypeConverters
 import android.content.Context
 import app.jordansilva.data.model.RecipeModel
 import app.jordansilva.data.model.UserModel
-import app.jordansilva.data.repository.local.converter.DateConverter
-import app.jordansilva.data.repository.local.converter.RecipeIngredientConverter
+import app.jordansilva.data.repository.local.converter.DefaultConverter
 
 @Database(entities = [(UserModel::class), (RecipeModel::class)],
         version = AppDatabase.VERSION)
-@TypeConverters(DateConverter::class, RecipeIngredientConverter::class)
+@TypeConverters(DefaultConverter::class)
 abstract class AppDatabase : RoomDatabase() {
-
 
     abstract fun userDao(): UserDao
     abstract fun recipeDao(): RecipesDao

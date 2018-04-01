@@ -4,9 +4,9 @@ import app.jordansilva.domain.model.Feed
 
 interface FeedRepository {
 
-    fun getUserFeeds(): List<Feed>
+    suspend fun getUserFeeds(): List<Feed>
 
-    fun favouriteFeed(feedId: Feed): Void
+    suspend fun favouriteFeed(feedId: Feed): Void
 
-    fun unFavouriteFeed(feedId: String): Void
+    suspend fun unFavouriteFeed(feedId: String): Void
 }

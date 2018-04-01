@@ -1,7 +1,6 @@
 package com.jordansilva.dailyeat.ui.feed
 
 import android.arch.lifecycle.Observer
-import android.arch.lifecycle.ViewModelProviders
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
@@ -24,13 +23,13 @@ import kotlinx.android.synthetic.main.fragment_dashboard.*
 import org.jetbrains.anko.find
 import org.jetbrains.anko.support.v4.ctx
 import org.jetbrains.anko.support.v4.toast
+import org.koin.android.architecture.ext.viewModel
 
 
 class FeedFragment : BaseFragment(), FeedAdapter.FeedListener {
 
     private lateinit var adapter: FeedAdapter
-    private lateinit var viewModel: FeedViewModel
-
+    private val viewModel by viewModel<FeedViewModel>()
 
     companion object {
         fun newInstance(): FeedFragment {
@@ -40,7 +39,6 @@ class FeedFragment : BaseFragment(), FeedAdapter.FeedListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        viewModel = ViewModelProviders.of(this).get(FeedViewModel::class.java)
         viewModel.getFeeds().observe(this, Observer { updateFeeds(it) })
     }
 
@@ -56,8 +54,6 @@ class FeedFragment : BaseFragment(), FeedAdapter.FeedListener {
     }
 
     fun getUserFeeds() {
-
-
         val data = Mock(context!!).mockList()
 
         adapter = FeedAdapter(context!!, data, this)
