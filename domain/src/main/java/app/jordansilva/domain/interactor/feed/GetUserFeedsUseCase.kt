@@ -9,7 +9,11 @@ import kotlinx.coroutines.experimental.Deferred
 class GetUserFeedsUseCase(private var feedRepository: FeedRepository) : BaseUseCase(), CancelableUseCase<List<Feed>> {
 
     override suspend fun execute(): Deferred<List<Feed>> {
-        return async { feedRepository.getUserFeeds() }
+        try {
+            return async { feedRepository.getUserFeeds() }
+        } catch (exception: Exception) {
+            throw exception
+        }
     }
 
 }
