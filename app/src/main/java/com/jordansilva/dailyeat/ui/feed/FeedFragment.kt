@@ -11,11 +11,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
+import com.google.gson.Gson
 import com.jordansilva.dailyeat.R
 import com.jordansilva.dailyeat.adapters.FeedAdapter
 import com.jordansilva.dailyeat.model.FeedView
 import com.jordansilva.dailyeat.ui.BaseFragment
 import com.jordansilva.dailyeat.ui.recipe.RecipeDetailActivity
+import com.jordansilva.dailyeat.util.Mock
 import com.jordansilva.dailyeat.util.mapToTypedArray
 import com.jordansilva.dailyeat.util.whenNotNull
 import kotlinx.android.synthetic.main.fragment_dashboard.*
@@ -53,6 +55,9 @@ class FeedFragment : BaseFragment(), FeedAdapter.FeedListener {
     }
 
     fun getUserFeeds() {
+        val jsonData = ArrayList(Mock(context!!).mockList())
+        val json = Gson().toJson(jsonData)
+
         val data = viewModel.getFeeds().value ?: listOf()
 
         adapter = FeedAdapter(context!!, data, this)
