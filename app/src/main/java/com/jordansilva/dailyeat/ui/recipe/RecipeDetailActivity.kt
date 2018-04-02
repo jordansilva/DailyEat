@@ -92,7 +92,6 @@ class RecipeDetailActivity : BaseActivity(), RecipeAdapter.RecipeListener {
     }
 
     private fun loadSimilarRecipes() {
-        val data = Mock(this@RecipeDetailActivity).mockList()
         val numberOfSimilarRecipes = 4
 
         textNumSimilarRecipes.text = String.format(getString(R.string.num_recipes), numberOfSimilarRecipes)

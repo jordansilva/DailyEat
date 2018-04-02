@@ -11,9 +11,9 @@ class RecipeViewMapper : MapperView<RecipeView, Recipe> {
                 type.name,
                 type.description,
                 type.imageUrl,
-                type.user.id,
-                type.user.avatar,
-                type.user.name,
+                type.userId,
+                type.userAvatar,
+                type.userName,
                 null).apply {
 
             //TODO: Create ingredients mapper

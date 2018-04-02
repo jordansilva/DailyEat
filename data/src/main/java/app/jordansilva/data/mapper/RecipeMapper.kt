@@ -4,12 +4,11 @@ import app.jordansilva.data.model.RecipeIngredientModel
 import app.jordansilva.data.model.RecipeModel
 import app.jordansilva.domain.model.Recipe
 import app.jordansilva.domain.model.RecipeIngredient
-import app.jordansilva.domain.model.User
 
 open class RecipeMapper(val mapperIngredient: Mapper<RecipeIngredient, RecipeIngredientModel>) : Mapper<Recipe, RecipeModel> {
 
     override fun mapFromDomain(type: Recipe): RecipeModel {
-        return RecipeModel(type.id, type.name, type.description, type.imageUrl, type.user.id).apply {
+        return RecipeModel(type.id, type.name, type.description, type.imageUrl, type.id).apply {
             ingredients = type.ingredients?.map { mapperIngredient.mapFromDomain(it) }
             tags = ArrayList(type.tags)
             rating = type.rating
@@ -22,7 +21,7 @@ open class RecipeMapper(val mapperIngredient: Mapper<RecipeIngredient, RecipeIng
     }
 
     override fun mapToDomain(type: RecipeModel): Recipe {
-        return Recipe(type.id, type.name, type.description, type.imageUrl, User(type.userId), null).apply {
+        return Recipe(type.id, type.name, type.description, type.imageUrl, type.userId, null).apply {
             ingredients = type.ingredients?.map { mapperIngredient.mapToDomain(it) }
             tags = type.tags
             rating = type.rating

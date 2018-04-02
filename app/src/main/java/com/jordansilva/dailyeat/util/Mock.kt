@@ -1,15 +1,13 @@
 package com.jordansilva.dailyeat.util
 
-import android.content.Context
 import app.jordansilva.domain.model.User
-import com.jordansilva.dailyeat.R
 import com.jordansilva.dailyeat.model.FeedView
 import java.util.*
 
 /**
  * Created by jordansilva on 19/03/18.
  */
-class Mock(var context: Context) {
+object Mock {
     fun mockUsers(): List<User> {
         val users = ArrayList<User>()
 
@@ -83,7 +81,7 @@ class Mock(var context: Context) {
             val item = FeedView(UUID.randomUUID().toString(),
                     recipeId = UUID.randomUUID().toString(),
                     name = "Food $i",
-                    description = context.getString(R.string.lorem_ipsum),
+                    description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sodales velit eget lobortis molestie. Vivamus ac neque ac lectus luctus mollis ac vitae erat. Aliquam vehicula eros ultrices enim tempor, eu tempus neque efficitur. Cras pretium mauris egestas, consequat mi ut, interdum velit. Nam lobortis consectetur eleifend.",
                     imageUrl = images[i],
                     authorId = UUID.randomUUID().toString(),
                     authorName = user.name,
