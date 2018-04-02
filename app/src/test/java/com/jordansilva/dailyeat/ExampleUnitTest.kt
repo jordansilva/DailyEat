@@ -31,7 +31,7 @@ class ExampleUnitTest {
 //        println( "feed.json created!")
 //
 //        jsonData.map {
-//            val recipe = Recipe(it.id, name = it.name, description = it.description, imageUrl = it.imageUrl,
+//            val recipe = Recipe(it.recipeId, name = it.name, description = it.description, imageUrl = it.imageUrl,
 //                    userId = it.authorId, ingredients = null).apply {
 //                favourited = it.saved
 //                liked = false

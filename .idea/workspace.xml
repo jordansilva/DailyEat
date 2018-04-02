@@ -19,44 +19,30 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.5/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.5/fileHashes/fileHashes.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.5/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.5/fileHashes/fileHashes.lock" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.5/fileHashes/resourceHashesCache.bin" afterPath="$PROJECT_DIR$/.gradle/4.5/fileHashes/resourceHashesCache.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.5/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.5/javaCompile/classAnalysis.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.5/javaCompile/jarAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.5/javaCompile/jarAnalysis.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.5/javaCompile/javaCompile.lock" afterPath="$PROJECT_DIR$/.gradle/4.5/javaCompile/javaCompile.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.5/javaCompile/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.5/javaCompile/taskHistory.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.5/javaCompile/taskJars.bin" afterPath="$PROJECT_DIR$/.gradle/4.5/javaCompile/taskJars.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.5/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.5/taskHistory/taskHistory.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.5/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.5/taskHistory/taskHistory.lock" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/jordansilva/dailyeat/mapper/RecipeViewMapper.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/jordansilva/dailyeat/mapper/RecipeViewMapper.kt" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/jordansilva/dailyeat/ui/feed/FeedFragment.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/jordansilva/dailyeat/ui/feed/FeedFragment.kt" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/jordansilva/dailyeat/ui/recipe/RecipeDetailActivity.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/jordansilva/dailyeat/ui/recipe/RecipeDetailActivity.kt" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/jordansilva/dailyeat/util/Mock.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/jordansilva/dailyeat/util/Mock.kt" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_scrolling.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/content_scrolling.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
       <change beforePath="$PROJECT_DIR$/app/src/test/java/com/jordansilva/dailyeat/ExampleUnitTest.kt" afterPath="$PROJECT_DIR$/app/src/test/java/com/jordansilva/dailyeat/ExampleUnitTest.kt" />
-      <change beforePath="$PROJECT_DIR$/data/src/main/java/app/jordansilva/data/mapper/RecipeMapper.kt" afterPath="$PROJECT_DIR$/data/src/main/java/app/jordansilva/data/mapper/RecipeMapper.kt" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/app/jordansilva/domain/model/Recipe.kt" afterPath="$PROJECT_DIR$/domain/src/main/java/app/jordansilva/domain/model/Recipe.kt" />
       <change beforePath="$PROJECT_DIR$/util/feed.json" afterPath="$PROJECT_DIR$/util/feed.json" />
-      <change beforePath="$PROJECT_DIR$/util/recipe/0a1f2602-f82f-4bb5-ac50-2f314c6fb7e7.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/util/recipe/2527644e-9f49-49b0-bda7-dab691746c0e.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/util/recipe/56d7796a-a819-47d0-9b67-55b14e057a18.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/util/recipe/5ac951d8-c426-4de3-b48e-ca5a370ec04a.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/util/recipe/638145cc-997a-4c95-ae13-d4a4e734aff0.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/util/recipe/63f1ff77-c1fa-4171-a52e-4c5e0b2640de.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/util/recipe/7a01f2e2-6ac7-46f4-b110-c64a8e120f19.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/util/recipe/7f20001b-5166-4081-b311-c26c274b2ac0.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/util/recipe/84093a31-b06f-4a0c-ad81-ea7676f8ebea.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/util/recipe/8f2ec3c9-66a2-4967-8ccc-e06ca6bbf56f.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/util/recipe/94b6fb2e-bf3f-469e-be54-c0360178347a.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/util/recipe/9d7925c8-2717-4d6e-9804-1310263dbef2.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/util/recipe/b9199712-b94e-4c05-89f2-d24f54594785.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/util/recipe/c5064b74-8ae5-4ad6-a79f-992a75617eff.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/util/recipe/c73ac207-f3b3-432f-af05-55909ec950c4.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/util/recipe/dd2ab36e-6456-43e9-9806-0a8b347d1830.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/util/recipe/f700c30f-0c05-4e8a-9ab4-7366f588cca2.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/util/recipe/03c4aff8-9ac3-4b45-b87a-8bc214e4827f.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/util/recipe/0c7542a5-036d-43f0-9664-d17be616ba9a.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/util/recipe/119a37bf-a2e6-473f-93b4-1e5a47f22928.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/util/recipe/36deefeb-f641-44da-9820-feac57050eae.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/util/recipe/44c10c23-2954-4537-a4c1-05e98ee99b4a.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/util/recipe/44d6ea6a-bcb8-4818-a235-efa96848de3c.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/util/recipe/585dca3b-0662-47bd-bca2-c31036a0b5a1.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/util/recipe/5bd4e05b-efbf-4841-909f-2ffe73c1d4f8.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/util/recipe/94c73e0a-4be7-49ac-98b8-60d97fa34ef5.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/util/recipe/9772d27f-8638-49d6-b69b-34e32bd24573.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/util/recipe/98e1c184-2932-41e6-9200-17fefa74577e.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/util/recipe/b3d5620e-6ce4-4fa2-897f-8b00523e0501.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/util/recipe/bcad41b6-6881-4584-b88d-1191347ff732.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/util/recipe/dbbc4bc8-c8ec-4856-a9ae-9fc254fc3540.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/util/recipe/f0451ea3-4e46-4c77-be9a-f17f7cc5d501.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/util/recipe/f3b002e1-76ba-41db-bd52-267b198aad3b.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/util/recipe/fe5fa4c8-f219-4972-ab24-f6711b8b27a5.json" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -82,14 +68,56 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="FeedFragment.kt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RecipeDetailActivity.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jordansilva/dailyeat/ui/recipe/RecipeDetailActivity.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="203">
+              <caret line="42" column="41" lean-forward="false" selection-start-line="42" selection-start-column="41" selection-end-line="42" selection-end-column="41" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ExampleUnitTest.kt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/test/java/com/jordansilva/dailyeat/ExampleUnitTest.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="245">
+              <caret line="41" column="29" lean-forward="false" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
+              <folding>
+                <element signature="e#34#262#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RecipeDetailViewModel.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jordansilva/dailyeat/ui/recipe/RecipeDetailViewModel.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="219">
+              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FeedFragment.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jordansilva/dailyeat/ui/feed/FeedFragment.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+            <state relative-caret-position="-496">
+              <caret line="33" column="43" lean-forward="false" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
               <folding>
                 <element signature="e#42#1097#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseViewModel.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jordansilva/dailyeat/ui/BaseViewModel.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="52">
+              <caret line="9" column="15" lean-forward="false" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -3855,6 +3883,35 @@
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
               <item name="dailyeat" type="cbb59c9e:AndroidPsiDirectoryNode" />
             </path>
+            <path>
+              <item name="DailyEat" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="dailyeat" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DailyEat" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="dailyeat" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+              <item name="feed" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DailyEat" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="dailyeat" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+              <item name="recipe" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DailyEat" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="dailyeat" type="cbb59c9e:AndroidPsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -3988,7 +4045,32 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Android JUnit.ExampleUnitTest.printMock">
+  <component name="RunManager" selected="Android JUnit.ExampleUnitTest.createDataset">
+    <configuration name="ExampleUnitTest.createDataset" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.jordansilva.dailyeat.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="app" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.jordansilva.dailyeat" />
+      <option name="MAIN_CLASS_NAME" value="com.jordansilva.dailyeat.ExampleUnitTest" />
+      <option name="METHOD_NAME" value="createDataset" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/app" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
     <configuration name="ExampleUnitTest.printMock" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -4175,13 +4257,15 @@
     <configuration name="&lt;template&gt;" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" default="true" selected="false">
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
     </configuration>
-    <list size="2">
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="Android App.app" />
       <item index="1" class="java.lang.String" itemvalue="Android JUnit.ExampleUnitTest.printMock" />
+      <item index="2" class="java.lang.String" itemvalue="Android JUnit.ExampleUnitTest.createDataset" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Android JUnit.ExampleUnitTest.printMock" />
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="Android JUnit.ExampleUnitTest.createDataset" />
+        <item index="1" class="java.lang.String" itemvalue="Android JUnit.ExampleUnitTest.printMock" />
       </list>
     </recent_temporary>
   </component>
@@ -4202,6 +4286,9 @@
     <servers />
   </component>
   <component name="TestHistory">
+    <history-entry file="ExampleUnitTest_createDataset - 2018.04.01 at 22h 37m 47s.xml">
+      <configuration name="ExampleUnitTest.createDataset" configurationId="AndroidJUnit" />
+    </history-entry>
     <history-entry file="ExampleUnitTest_printMock - 2018.04.01 at 22h 10m 34s.xml">
       <configuration name="ExampleUnitTest.printMock" configurationId="AndroidJUnit" />
     </history-entry>
@@ -4233,7 +4320,7 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991204" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32991204" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2580645" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -4305,36 +4392,71 @@
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/jordansilva/dailyeat/ui/recipe/RecipeDetailViewModel.kt</url>
-          <line>28</line>
-          <properties />
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/domain/src/main/java/app/jordansilva/domain/interactor/recipe/GetRecipeUseCase.kt</url>
-          <line>10</line>
-          <properties />
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/data/src/main/java/app/jordansilva/data/util/ModelExtensions.kt</url>
           <line>31</line>
           <properties />
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/jordansilva/dailyeat/mapper/RecipeViewMapper.kt</url>
-          <line>9</line>
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/jordansilva/dailyeat/ui/BaseViewModel.kt</url>
+          <line>36</line>
           <properties />
-          <option name="timeStamp" value="15" />
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/jordansilva/dailyeat/ui/BaseViewModel.kt</url>
+          <line>40</line>
+          <properties />
+          <option name="timeStamp" value="18" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="16" />
+      <option name="time" value="27" />
     </breakpoint-manager>
-    <watches-manager />
+    <watches-manager>
+      <configuration name="Remote">
+        <watch expression="viewModel.recipe.value?.id" language="kotlin" />
+        <watch expression="recipe.id" language="kotlin" />
+        <watch expression="recipeId" language="kotlin" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
+      <expression>
+        <expression-string>recipe.id</expression-string>
+        <language-id>kotlin</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>recipeId</expression-string>
+        <language-id>kotlin</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>viewModel.recipe.value?.id</expression-string>
+        <language-id>kotlin</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>viewModel.recipe.value</expression-string>
+        <language-id>kotlin</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>viewModel.recipe</expression-string>
+        <language-id>kotlin</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>viewModel.recipe.hasObservers()</expression-string>
+        <language-id>kotlin</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>viewModel.recipe.hasActiveObservers()</expression-string>
+        <language-id>kotlin</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>getRecipeUseCase.execute(recipeId).id</expression-string>
         <language-id>kotlin</language-id>
@@ -4350,65 +4472,9 @@
         <language-id>kotlin</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
-      <expression>
-        <expression-string>mapper</expression-string>
-        <language-id>kotlin</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>(throwable as ConnectException).cause</expression-string>
-        <language-id>kotlin</language-id>
-        <custom-info>import java.net.ConnectException</custom-info>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>(throwable as ConnectException)</expression-string>
-        <language-id>kotlin</language-id>
-        <custom-info>import java.net.ConnectException</custom-info>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>throwable as ConnectException</expression-string>
-        <language-id>kotlin</language-id>
-        <custom-info>import java.net.ConnectException</custom-info>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>((ConnectException)throwable)</expression-string>
-        <language-id>kotlin</language-id>
-        <custom-info>import java.net.ConnectException</custom-info>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>throwable</expression-string>
-        <language-id>kotlin</language-id>
-        <custom-info>import java.net.ConnectException</custom-info>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>throwable.response().errorBody()!!.string()</expression-string>
-        <language-id>kotlin</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/data/src/main/java/app/jordansilva/data/mock/remote/FeedServiceFactoryMock.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/src/main/java/app/jordansilva/data/util/Constants.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="39">
-          <caret line="3" column="18" lean-forward="false" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.8.2/b2da9f8444128651758719856de579eacff7f387/gson-2.8.2-sources.jar!/com/google/gson/Gson.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-113">
@@ -4643,42 +4709,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jordansilva/dailyeat/ui/feed/FeedViewModel.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="507">
-          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jordansilva/dailyeat/mapper/MapperView.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="117">
           <caret line="9" column="10" lean-forward="false" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jordansilva/dailyeat/mapper/RecipeViewMapper.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="14" column="32" lean-forward="true" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jordansilva/dailyeat/ui/recipe/RecipeDetailViewModel.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="16" column="52" lean-forward="true" selection-start-line="16" selection-start-column="52" selection-end-line="16" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/domain/src/main/java/app/jordansilva/domain/interactor/recipe/GetRecipeUseCase.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -4785,30 +4819,78 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jordansilva/dailyeat/ui/recipe/RecipeDetailActivity.kt">
+    <entry file="file://$PROJECT_DIR$/domain/src/main/java/app/jordansilva/domain/interactor/recipe/GetRecipeUseCase.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="91">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jordansilva/dailyeat/mapper/RecipeViewMapper.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="9" column="30" lean-forward="false" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.koin/koin-android-architecture/0.9.1/79c1e680f8687779ba1d359cf85ea73e6de0d426/koin-android-architecture-0.9.1-sources.jar!/org/koin/android/architecture/ext/LifecycleOwnerExt.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
-          <caret line="94" column="0" lean-forward="false" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
+          <caret line="20" column="50" lean-forward="false" selection-start-line="20" selection-start-column="50" selection-end-line="20" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jordansilva/dailyeat/ui/BaseViewModel.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="9" column="15" lean-forward="false" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jordansilva/dailyeat/ui/feed/FeedViewModel.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="17" column="73" lean-forward="false" selection-start-line="17" selection-start-column="73" selection-end-line="17" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jordansilva/dailyeat/ui/feed/FeedFragment.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-496">
+          <caret line="33" column="43" lean-forward="false" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
+          <folding>
+            <element signature="e#42#1097#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jordansilva/dailyeat/ui/recipe/RecipeDetailViewModel.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jordansilva/dailyeat/ui/recipe/RecipeDetailActivity.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="42" column="41" lean-forward="false" selection-start-line="42" selection-start-column="41" selection-end-line="42" selection-end-column="41" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/test/java/com/jordansilva/dailyeat/ExampleUnitTest.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="13">
-          <caret line="18" column="23" lean-forward="false" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+        <state relative-caret-position="245">
+          <caret line="41" column="29" lean-forward="false" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
           <folding>
-            <element signature="e#34#92#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jordansilva/dailyeat/ui/feed/FeedFragment.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-          <folding>
-            <element signature="e#42#1097#0" expanded="true" />
+            <element signature="e#34#262#0" expanded="true" />
           </folding>
         </state>
       </provider>

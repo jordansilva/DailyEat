@@ -15,7 +15,6 @@ import com.jordansilva.dailyeat.adapters.RecipeAdapter
 import com.jordansilva.dailyeat.model.RecipeIngredientView
 import com.jordansilva.dailyeat.model.RecipeView
 import com.jordansilva.dailyeat.ui.BaseActivity
-import com.jordansilva.dailyeat.util.Mock
 import com.jordansilva.dailyeat.util.format
 import com.jordansilva.dailyeat.util.loadUrl
 import com.jordansilva.dailyeat.util.notNull
@@ -46,11 +45,18 @@ class RecipeDetailActivity : BaseActivity(), RecipeAdapter.RecipeListener {
         supportPostponeEnterTransition()
 
         recipeId = intent.getStringExtra(EXTRA_RECIPE)
-        recipe = viewModel.getRecipeById(recipeId).value
+
+        recipe = viewModel.recipe.value
         viewModel.recipe.observe(this, Observer {
             recipe = it
             configureRecipe()
         })
+
+        recipe = when (viewModel.recipe.value?.id) {
+            recipeId -> viewModel.recipe.value
+            else -> viewModel.getRecipeById(recipeId).value
+        }
+
         setupUI()
     }
 
