@@ -24,6 +24,7 @@
 
         <!-- Section Ingredients -->
         <include
+            android:id="@+id/recipeIngredients"
             layout="@layout/layout_recipe_ingredients"
             android:paddingEnd="@dimen/padding_medium"
             android:paddingStart="@dimen/padding_medium" />

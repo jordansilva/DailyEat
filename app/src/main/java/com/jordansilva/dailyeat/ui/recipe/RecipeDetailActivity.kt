@@ -12,7 +12,6 @@ import android.view.animation.AnimationUtils
 import com.jordansilva.dailyeat.R
 import com.jordansilva.dailyeat.adapters.IngredientAdapter
 import com.jordansilva.dailyeat.adapters.RecipeAdapter
-import com.jordansilva.dailyeat.model.RecipeIngredientView
 import com.jordansilva.dailyeat.model.RecipeView
 import com.jordansilva.dailyeat.ui.BaseActivity
 import com.jordansilva.dailyeat.util.format
@@ -34,7 +33,6 @@ class RecipeDetailActivity : BaseActivity(), RecipeAdapter.RecipeListener {
         val EXTRA_RECIPE = "RecipeDetailActivity.EXTRA_RECIPE"
     }
 
-    private lateinit var recipeId: String
     private val viewModel by viewModel<RecipeDetailViewModel>()
     private var recipe: RecipeView? = null
     private var nestedViewTopMargin: Int = 0
@@ -44,29 +42,31 @@ class RecipeDetailActivity : BaseActivity(), RecipeAdapter.RecipeListener {
         setContentView(R.layout.activity_recipe_detail)
         supportPostponeEnterTransition()
 
-        recipeId = intent.getStringExtra(EXTRA_RECIPE)
-
-        recipe = viewModel.recipe.value
+        val recipeId = intent.getStringExtra(EXTRA_RECIPE)
         viewModel.recipe.observe(this, Observer {
-            recipe = it
-            configureRecipe()
+            setupRecipe(recipe)
         })
 
-        recipe = when (viewModel.recipe.value?.id) {
+        fetchRecipeById(recipeId)
+    }
+
+    private fun fetchRecipeById(recipeId: String) {
+        val recipe = when (viewModel.recipe.value?.id) {
             recipeId -> viewModel.recipe.value
             else -> viewModel.getRecipeById(recipeId).value
         }
 
-        setupUI()
+        setupRecipe(recipe)
     }
 
-    private fun setupUI() {
-        configureRecipe()
+    private fun setupRecipe(data: RecipeView?) {
+        recipe = data
+        loadHeader()
         loadIngredients()
         loadSimilarRecipes()
     }
 
-    private fun configureRecipe() {
+    private fun loadHeader() {
         recipe.notNull {
             textTitle.text = it.name
             ratingBar.rating = it.rating
@@ -82,19 +82,15 @@ class RecipeDetailActivity : BaseActivity(), RecipeAdapter.RecipeListener {
     }
 
     private fun loadIngredients() {
-        val animation = AnimationUtils.loadLayoutAnimation(ctx, R.anim.layout_animation_fall_down)
+        recipe?.let {
+            val data = it.ingredients ?: listOf()
+            recipeIngredients.visibility = View.VISIBLE
 
-        val ingredients = ArrayList<RecipeIngredientView>()
-        for (i in 0..7) {
-            ingredients.add(RecipeIngredientView("Ingredient $i", i + 1.toFloat(), "can"))
-        }
-
-        recyclerIngredients.adapter = IngredientAdapter(this@RecipeDetailActivity, ingredients)
-        recyclerIngredients.layoutManager = LinearLayoutManager(this@RecipeDetailActivity, LinearLayoutManager.VERTICAL, false)
-        recyclerIngredients.layoutAnimation = animation
-        recyclerIngredients.scheduleLayoutAnimation()
-
-
+            recyclerIngredients.adapter = IngredientAdapter(this@RecipeDetailActivity, data)
+            recyclerIngredients.layoutManager = LinearLayoutManager(this@RecipeDetailActivity, LinearLayoutManager.VERTICAL, false)
+            recyclerIngredients.layoutAnimation = AnimationUtils.loadLayoutAnimation(ctx, R.anim.layout_animation_fall_down)
+            recyclerIngredients.scheduleLayoutAnimation()
+        } ?: run { recipeIngredients.visibility = View.GONE }
     }
 
     private fun loadSimilarRecipes() {
