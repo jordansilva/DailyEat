@@ -2,10 +2,7 @@ package com.jordansilva.dailyeat.ui
 
 import android.arch.lifecycle.ViewModel
 import android.support.annotation.CallSuper
-import kotlinx.coroutines.experimental.CoroutineScope
-import kotlinx.coroutines.experimental.Job
-import kotlinx.coroutines.experimental.android.UI
-import kotlinx.coroutines.experimental.launch
+import kotlinx.coroutines.*
 
 abstract class BaseViewModel : ViewModel() {
 
@@ -14,7 +11,7 @@ abstract class BaseViewModel : ViewModel() {
     @CallSuper
     @Synchronized
     protected fun launchAsync(block: suspend CoroutineScope.() -> Unit) {
-        val job: Job = launch(UI) { block() }
+        val job: Job = GlobalScope.launch(Dispatchers.Main) { block() }
         asyncJobs.add(job)
         job.invokeOnCompletion { asyncJobs.remove(job) }
     }

@@ -8,29 +8,34 @@ import android.support.design.widget.AppBarLayout
 
 
 fun AppBarLayout.collapsed(f: () -> Unit) {
-    this.addOnOffsetChangedListener { appBarLayout, verticalOffset ->
-        run {
-            if (Math.abs(verticalOffset) == appBarLayout.totalScrollRange)
-                f()
-        }
-    }
+    this.addOnOffsetChangedListener(
+            AppBarLayout.OnOffsetChangedListener { appBarLayout, verticalOffset ->
+                run {
+                    if (Math.abs(verticalOffset) == appBarLayout.totalScrollRange)
+                        f()
+                }
+            })
 }
 
 fun AppBarLayout.expanded(f: () -> Unit) {
-    this.addOnOffsetChangedListener { _, verticalOffset ->
-        run {
-            if (Math.abs(verticalOffset) == 0)
-                f()
-        }
-    }
+    this.addOnOffsetChangedListener(
+            AppBarLayout.OnOffsetChangedListener { _, verticalOffset ->
+                run {
+                    if (Math.abs(verticalOffset) == 0)
+                        f()
+                }
+            }
+    )
 }
 
 fun AppBarLayout.sliding(f: () -> Unit) {
-    this.addOnOffsetChangedListener { appBarLayout, verticalOffset ->
-        run {
-            if (!arrayOf(appBarLayout.totalScrollRange, 0)
-                            .contains(Math.abs(verticalOffset)))
-                f()
-        }
-    }
+    this.addOnOffsetChangedListener(
+            AppBarLayout.OnOffsetChangedListener { appBarLayout, verticalOffset ->
+                run {
+                    if (!arrayOf(appBarLayout.totalScrollRange, 0)
+                                    .contains(Math.abs(verticalOffset)))
+                        f()
+                }
+            }
+    )
 }

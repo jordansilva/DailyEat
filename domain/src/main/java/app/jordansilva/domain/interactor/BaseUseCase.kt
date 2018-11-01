@@ -1,9 +1,6 @@
 package app.jordansilva.domain.interactor
 
-import kotlinx.coroutines.experimental.CommonPool
-import kotlinx.coroutines.experimental.CoroutineScope
-import kotlinx.coroutines.experimental.Deferred
-import kotlinx.coroutines.experimental.async
+import kotlinx.coroutines.*
 
 abstract class BaseUseCase {
 
@@ -11,7 +8,7 @@ abstract class BaseUseCase {
 
     @Synchronized
     protected suspend fun <T> async(block: suspend CoroutineScope.() -> T): Deferred<T> {
-        val deferred: Deferred<T> = async(CommonPool) { block() }
+        val deferred: Deferred<T> = GlobalScope.async { block() }
         deferredObjects.add(deferred)
         deferred.invokeOnCompletion { deferredObjects.remove(deferred) }
         return deferred

@@ -12,7 +12,6 @@ import android.view.Window
 import android.view.animation.AlphaAnimation
 import com.jordansilva.dailyeat.R
 import com.jordansilva.dailyeat.ui.feed.FeedFragment
-import com.jordansilva.dailyeat.util.disableShiftMode
 import com.jordansilva.dailyeat.util.notNull
 import com.jordansilva.dailyeat.util.typeface
 import kotlinx.android.synthetic.main.activity_main.*
@@ -56,7 +55,6 @@ class MainActivity : BaseActivity() {
             window.exitTransition = transition
         }
 
-
         setContentView(R.layout.activity_main)
         setupUI()
     }
@@ -68,7 +66,6 @@ class MainActivity : BaseActivity() {
 
     fun setupNavigation() {
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
-        navigation.disableShiftMode()
         navigation.typeface(null, style = Typeface.BOLD, allCaps = true)
     }
 
@@ -77,15 +74,17 @@ class MainActivity : BaseActivity() {
 
         val actionBarLayout = find<AppBarLayout>(R.id.app_bar)
         actionBarLayout.notNull {
-            it.addOnOffsetChangedListener { appBarLayout, verticalOffset ->
-                run {
-                    when (Math.abs(verticalOffset)) {
-                        appBarLayout.totalScrollRange -> actionBarCollapsed()
-                        0 -> actionBarExpanded()
-                        else -> actionBarIdle()
-                    }
-                }
-            }
+
+            it.addOnOffsetChangedListener(
+                    AppBarLayout.OnOffsetChangedListener { appBarLayout, verticalOffset ->
+                        run {
+                            when (Math.abs(verticalOffset)) {
+                                appBarLayout.totalScrollRange -> actionBarCollapsed()
+                                0 -> actionBarExpanded()
+                                else -> actionBarIdle()
+                            }
+                        }
+                    })
         }
     }
 

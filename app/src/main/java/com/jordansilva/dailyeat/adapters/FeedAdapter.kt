@@ -19,7 +19,7 @@ import com.jordansilva.dailyeat.model.FeedView
 import com.jordansilva.dailyeat.util.loadUrlCenterCrop
 import com.jordansilva.dailyeat.util.relativeTime
 import kotlinx.android.synthetic.main.item_dashboard_recipe.view.*
-import org.jetbrains.anko.sdk25.coroutines.onClick
+import org.jetbrains.anko.sdk27.coroutines.onClick
 
 
 /**
@@ -47,10 +47,10 @@ class FeedAdapter(private val context: Context,
         val item = data[position]
 
         holder.bindView(item)
-        holder.name.onClick { view -> listener?.onRecipeClick(holder.itemView!!, item) }
-        holder.description.onClick { view -> listener?.onRecipeClick(holder.itemView!!, item) }
-        holder.image.onClick { view -> listener?.onRecipeClick(holder.itemView!!, item) }
-        holder.btnLike.onClick {
+        holder.name.setOnClickListener { listener?.onRecipeClick(holder.itemView, item) }
+        holder.description.setOnClickListener { listener?.onRecipeClick(holder.itemView, item) }
+        holder.image.setOnClickListener { listener?.onRecipeClick(holder.itemView, item) }
+        holder.btnLike.setOnClickListener {
             item.liked = !item.liked
             holder.animateLikeButton(it, item.liked, true)
             listener?.onLikeClick(item)

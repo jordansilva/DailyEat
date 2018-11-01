@@ -44,7 +44,7 @@ class RecipeDetailActivity : BaseActivity(), RecipeAdapter.RecipeListener {
 
         val recipeId = intent.getStringExtra(EXTRA_RECIPE)
         viewModel.recipe.observe(this, Observer {
-            setupRecipe(recipe)
+            setupRecipe(it)
         })
 
         fetchRecipeById(recipeId)
@@ -118,16 +118,18 @@ class RecipeDetailActivity : BaseActivity(), RecipeAdapter.RecipeListener {
         nestedViewTopMargin = layoutParams.topMargin
 
         val actionBarLayout = find<AppBarLayout>(R.id.app_bar)
-        actionBarLayout.addOnOffsetChangedListener { appBarLayout, verticalOffset ->
-            run {
-                val offset = Math.abs(verticalOffset)
-                when (offset) {
-                    appBarLayout.totalScrollRange -> actionBarCollapsed()
-                    0 -> actionBarExpanded()
-                    else -> actionBarSliding(offset, appBarLayout.totalScrollRange)
+        actionBarLayout.addOnOffsetChangedListener(
+                AppBarLayout.OnOffsetChangedListener { appBarLayout, verticalOffset ->
+                    run {
+                        val offset = Math.abs(verticalOffset)
+                        when (offset) {
+                            appBarLayout.totalScrollRange -> actionBarCollapsed()
+                            0 -> actionBarExpanded()
+                            else -> actionBarSliding(offset, appBarLayout.totalScrollRange)
+                        }
+                    }
                 }
-            }
-        }
+        )
     }
 
     private fun actionBarSliding(offset: Int, totalScrollRange: Int) {

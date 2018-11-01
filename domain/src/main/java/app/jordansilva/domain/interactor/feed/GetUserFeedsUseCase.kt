@@ -4,7 +4,7 @@ import app.jordansilva.domain.interactor.BaseUseCase
 import app.jordansilva.domain.interactor.CancelableUseCase
 import app.jordansilva.domain.model.Feed
 import app.jordansilva.domain.repository.FeedRepository
-import kotlinx.coroutines.experimental.Deferred
+import kotlinx.coroutines.Deferred
 
 class GetUserFeedsUseCase(private var feedRepository: FeedRepository) : BaseUseCase(), CancelableUseCase<List<Feed>> {
 

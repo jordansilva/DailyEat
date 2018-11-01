@@ -90,7 +90,6 @@ override fun onRecipeClick(view: View, item: FeedView) {
             val actionBar = decor.findViewById<View>(resources.getIdentifier("action_bar_container", "id", "android"))
         }
 
-
         val options = ActivityOptionsCompat.makeSceneTransitionAnimation(activity!!, *pairViewString.mapToTypedArray { it })
 
         startActivity(intent, options.toBundle())

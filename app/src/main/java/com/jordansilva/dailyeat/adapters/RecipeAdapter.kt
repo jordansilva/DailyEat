@@ -12,7 +12,7 @@ import com.jordansilva.dailyeat.util.loadUrlWithTransformation
 import com.jordansilva.dailyeat.util.px
 import jp.wasabeef.picasso.transformations.RoundedCornersTransformation
 import kotlinx.android.synthetic.main.item_dashboard_recipe.view.*
-import org.jetbrains.anko.sdk25.coroutines.onClick
+import org.jetbrains.anko.sdk27.coroutines.onClick
 
 
 /**

@@ -4,7 +4,7 @@ import app.jordansilva.data.model.BaseModel
 import app.jordansilva.data.repository.remote.GeneralApiException
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
-import kotlinx.coroutines.experimental.Deferred
+import kotlinx.coroutines.Deferred
 import retrofit2.HttpException
 import java.io.IOException
 
